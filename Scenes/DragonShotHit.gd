@@ -1,11 +1,8 @@
-extends Node
-class_name AntHealth
-var hp: int
-@onready var ant: Ant = $".."
+extends Sprite2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	setHealth()
 	pass # Replace with function body.
 
 
@@ -13,13 +10,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func hit(damage: int):
-	hp -= damage
-	if hp <= 0 :
-		die()
-
-func die():
-	ant.die()
-
-func setHealth():
-	hp = AntEnum.AntHealth[ant.type]
+func hit(position: Vector2):
+	show()
+	global_position=position
+	await get_tree().create_timer(0.15).timeout
+	hide()

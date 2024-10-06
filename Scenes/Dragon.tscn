@@ -1,0 +1,97 @@
+[gd_scene load_steps=15 format=3 uid="uid://cn502344jwb6w"]
+
+[ext_resource type="Texture2D" uid="uid://c6stji2gehdgf" path="res://LudumAnts/Sprites/Dragon/dragon_1.png" id="1_1ao0n"]
+[ext_resource type="Script" path="res://LudumAnts/Scenes/dragonRange.gd" id="2_fp5ig"]
+[ext_resource type="Texture2D" uid="uid://cmfbkubr6gjvj" path="res://LudumAnts/Sprites/Dragon/dragon_2.png" id="3_2gwp2"]
+[ext_resource type="Texture2D" uid="uid://cu7h0i4n7o0aa" path="res://LudumAnts/Sprites/Dragon/dragon_3.png" id="4_5iqix"]
+[ext_resource type="Texture2D" uid="uid://dvo7puukikksq" path="res://LudumAnts/Sprites/Dragon/dragon_4.png" id="5_g1y3s"]
+[ext_resource type="Texture2D" uid="uid://blw045k174pes" path="res://LudumAnts/Sprites/Dragon/dragon_fire.png" id="6_btp36"]
+[ext_resource type="Texture2D" uid="uid://bbr5tq6j40t58" path="res://LudumAnts/Sprites/Dragon/fireball.png" id="7_83c6g"]
+[ext_resource type="Texture2D" uid="uid://cm6tyyl0k6u5f" path="res://LudumAnts/Sprites/Dragon/fireball_impact.png" id="7_mkcsr"]
+[ext_resource type="Script" path="res://LudumAnts/Scenes/dragonShot.gd" id="8_roirb"]
+[ext_resource type="Script" path="res://LudumAnts/Scenes/DragonShotHit.gd" id="9_qa4p8"]
+
+[sub_resource type="Animation" id="Animation_dbre1"]
+resource_name = "Fire"
+length = 0.5
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteParent/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("5_g1y3s"), ExtResource("6_btp36")]
+}
+
+[sub_resource type="Animation" id="Animation_62c4j"]
+resource_name = "Idle"
+step = 1.33
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteParent/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33, 0.66, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_1ao0n"), ExtResource("3_2gwp2"), ExtResource("4_5iqix"), ExtResource("3_2gwp2")]
+}
+
+[sub_resource type="Animation" id="Animation_03v4r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteParent/Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_1ao0n")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_btxbv"]
+_data = {
+"Fire": SubResource("Animation_dbre1"),
+"Idle": SubResource("Animation_62c4j"),
+"RESET": SubResource("Animation_03v4r")
+}
+
+[node name="Dragon" type="Node2D"]
+
+[node name="SpriteParent" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteParent"]
+position = Vector2(-10, 115)
+texture = ExtResource("1_1ao0n")
+
+[node name="FireOrigin" type="Node2D" parent="SpriteParent"]
+position = Vector2(0, 200)
+
+[node name="Range" type="Node2D" parent="."]
+script = ExtResource("2_fp5ig")
+
+[node name="DragonAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_btxbv")
+}
+autoplay = "Idle"
+
+[node name="Shot" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("7_83c6g")
+script = ExtResource("8_roirb")
+
+[node name="ShotHit" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("7_mkcsr")
+script = ExtResource("9_qa4p8")

@@ -1,0 +1,227 @@
+[gd_scene load_steps=12 format=3 uid="uid://cpnkpgp66f34y"]
+
+[ext_resource type="Texture2D" uid="uid://5qthh46snqiw" path="res://LudumAnts/Sprites/war_trench.png" id="1_cja37"]
+[ext_resource type="Script" path="res://LudumAnts/Scenes/Ants.gd" id="2_04n7g"]
+[ext_resource type="Texture2D" uid="uid://c6stji2gehdgf" path="res://LudumAnts/Sprites/Dragon/dragon_1.png" id="2_6tsr6"]
+[ext_resource type="Shader" path="res://LudumAnts/GreenishShader.gdshader" id="3_gb7wl"]
+[ext_resource type="Script" path="res://LudumAnts/Scenes/Route.gd" id="3_kyroh"]
+[ext_resource type="Script" path="res://LudumAnts/Scenes/Spawner.gd" id="4_bfblq"]
+[ext_resource type="Script" path="res://test.gd" id="6_vpls0"]
+[ext_resource type="Script" path="res://LudumAnts/Scenes/gm.gd" id="7_0ujyl"]
+[ext_resource type="Script" path="res://LudumAnts/Scenes/round.gd" id="8_lk4fj"]
+
+[sub_resource type="TileSet" id="TileSet_lb3np"]
+tile_shape = 3
+tile_size = Vector2i(200, 200)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4emt5"]
+shader = ExtResource("3_gb7wl")
+
+[node name="Scene" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(2878, 1623)
+scale = Vector2(3, 3)
+texture = ExtResource("1_cja37")
+
+[node name="BluePrint" type="TileMapLayer" parent="."]
+position = Vector2(4114, 1215)
+tile_set = SubResource("TileSet_lb3np")
+
+[node name="Node2D" type="Node2D" parent="BluePrint"]
+script = ExtResource("6_vpls0")
+
+[node name="Sprite2D" type="Sprite2D" parent="BluePrint/Node2D"]
+z_index = 100
+material = SubResource("ShaderMaterial_4emt5")
+position = Vector2(-10, 115)
+texture = ExtResource("2_6tsr6")
+
+[node name="Ants" type="Node" parent="."]
+script = ExtResource("2_04n7g")
+
+[node name="Route" type="Node" parent="."]
+script = ExtResource("3_kyroh")
+
+[node name="Spawner" type="Node" parent="Route"]
+script = ExtResource("4_bfblq")
+
+[node name="Waymark" type="Node2D" parent="Route"]
+position = Vector2(730, 3239)
+
+[node name="Waymark2" type="Node2D" parent="Route"]
+position = Vector2(950, 2898)
+
+[node name="Waymark3" type="Node2D" parent="Route"]
+position = Vector2(1098, 2736)
+
+[node name="Waymark4" type="Node2D" parent="Route"]
+position = Vector2(1179, 2530)
+
+[node name="Waymark5" type="Node2D" parent="Route"]
+position = Vector2(1273, 2444)
+
+[node name="Waymark6" type="Node2D" parent="Route"]
+position = Vector2(1327, 2274)
+
+[node name="Waymark7" type="Node2D" parent="Route"]
+position = Vector2(1448, 2179)
+
+[node name="Waymark8" type="Node2D" parent="Route"]
+position = Vector2(1623, 2287)
+
+[node name="Waymark9" type="Node2D" parent="Route"]
+position = Vector2(1740, 2570)
+
+[node name="Waymark10" type="Node2D" parent="Route"]
+position = Vector2(1969, 2543)
+
+[node name="Waymark11" type="Node2D" parent="Route"]
+position = Vector2(2077, 2337)
+
+[node name="Waymark12" type="Node2D" parent="Route"]
+position = Vector2(2135, 2202)
+
+[node name="Waymark13" type="Node2D" parent="Route"]
+position = Vector2(2382, 2215)
+
+[node name="Waymark14" type="Node2D" parent="Route"]
+position = Vector2(2481, 2404)
+
+[node name="Waymark15" type="Node2D" parent="Route"]
+position = Vector2(2593, 2561)
+
+[node name="Waymark16" type="Node2D" parent="Route"]
+position = Vector2(2948, 2548)
+
+[node name="Waymark17" type="Node2D" parent="Route"]
+position = Vector2(3352, 2539)
+
+[node name="Waymark18" type="Node2D" parent="Route"]
+position = Vector2(3488, 2102)
+
+[node name="Waymark19" type="Node2D" parent="Route"]
+position = Vector2(3688, 1744)
+
+[node name="Waymark20" type="Node2D" parent="Route"]
+position = Vector2(3948, 1576)
+
+[node name="Waymark21" type="Node2D" parent="Route"]
+position = Vector2(4320, 1630)
+
+[node name="Waymark22" type="Node2D" parent="Route"]
+position = Vector2(4529, 1734)
+
+[node name="Waymark23" type="Node2D" parent="Route"]
+position = Vector2(4574, 2014)
+
+[node name="Waymark24" type="Node2D" parent="Route"]
+position = Vector2(4406, 2252)
+
+[node name="Waymark25" type="Node2D" parent="Route"]
+position = Vector2(4231, 2379)
+
+[node name="Waymark26" type="Node2D" parent="Route"]
+position = Vector2(3840, 2265)
+
+[node name="Waymark27" type="Node2D" parent="Route"]
+position = Vector2(3634, 2163)
+
+[node name="Waymark28" type="Node2D" parent="Route"]
+position = Vector2(3380, 1998)
+
+[node name="Waymark29" type="Node2D" parent="Route"]
+position = Vector2(2916, 1792)
+
+[node name="Waymark30" type="Node2D" parent="Route"]
+position = Vector2(2659, 1760)
+
+[node name="Waymark31" type="Node2D" parent="Route"]
+position = Vector2(2640, 1331)
+
+[node name="Waymark32" type="Node2D" parent="Route"]
+position = Vector2(2840, 1274)
+
+[node name="Waymark33" type="Node2D" parent="Route"]
+position = Vector2(3183, 1245)
+
+[node name="Waymark34" type="Node2D" parent="Route"]
+position = Vector2(3834, 1290)
+
+[node name="Waymark35" type="Node2D" parent="Route"]
+position = Vector2(4507, 1245)
+
+[node name="Waymark36" type="Node2D" parent="Route"]
+position = Vector2(4513, 960)
+
+[node name="Waymark37" type="Node2D" parent="Route"]
+position = Vector2(3859, 957)
+
+[node name="Waymark38" type="Node2D" parent="Route"]
+position = Vector2(3240, 941)
+
+[node name="Waymark39" type="Node2D" parent="Route"]
+position = Vector2(2853, 944)
+
+[node name="Waymark40" type="Node2D" parent="Route"]
+position = Vector2(2854, 652)
+
+[node name="Waymark41" type="Node2D" parent="Route"]
+position = Vector2(3502, 623)
+
+[node name="Waymark42" type="Node2D" parent="Route"]
+position = Vector2(3854, 599)
+
+[node name="Waymark43" type="Node2D" parent="Route"]
+position = Vector2(4410, 587)
+
+[node name="Waymark44" type="Node2D" parent="Route"]
+position = Vector2(4530, 587)
+
+[node name="Waymark45" type="Node2D" parent="Route"]
+position = Vector2(4502, 315)
+
+[node name="Waymark46" type="Node2D" parent="Route"]
+position = Vector2(2350, 331)
+
+[node name="Waymark47" type="Node2D" parent="Route"]
+position = Vector2(2322, 1107)
+
+[node name="Waymark48" type="Node2D" parent="Route"]
+position = Vector2(1902, 1079)
+
+[node name="Waymark49" type="Node2D" parent="Route"]
+position = Vector2(1874, 339)
+
+[node name="Waymark50" type="Node2D" parent="Route"]
+position = Vector2(1454, 315)
+
+[node name="Waymark51" type="Node2D" parent="Route"]
+position = Vector2(1398, 1103)
+
+[node name="Waymark52" type="Node2D" parent="Route"]
+position = Vector2(726, 1091)
+
+[node name="GM" type="Node" parent="."]
+script = ExtResource("7_0ujyl")
+
+[node name="HP" type="Node" parent="GM"]
+
+[node name="Loyalty" type="Node" parent="GM"]
+
+[node name="Money" type="Node" parent="GM"]
+
+[node name="Round" type="Node" parent="GM"]
+script = ExtResource("8_lk4fj")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(2043, 1000)
+scale = Vector2(0.403736, 0.742362)
+
+[node name="Camera2D" type="Camera2D" parent="Node2D"]
+position = Vector2(2092.95, 855.378)
+scale = Vector2(-0.814936, -8.16827)
+zoom = Vector2(0.2, 0.2)
+
+[node name="Waymark27" type="Node2D" parent="."]
+position = Vector2(3139, 1861)
