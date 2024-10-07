@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://e08pp5b8jifm"]
 
-[ext_resource type="Script" path="res://LudumAnts/Scenes/Ant.gd" id="1_ydmhr"]
-[ext_resource type="Script" path="res://LudumAnts/Scenes/AntHealth.gd" id="2_4a8gp"]
-[ext_resource type="Script" path="res://LudumAnts/Scenes/AntSpriteParent.gd" id="2_g5xvx"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/ant/Ant.gd" id="1_ydmhr"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/ant/AntHealth.gd" id="2_4a8gp"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/ant/AntSpriteParent.gd" id="2_g5xvx"]
 [ext_resource type="Texture2D" uid="uid://dcu8esx88wvhu" path="res://LudumAnts/Sprites/Ants/pillager_up.png" id="2_jqw2m"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/ant/AntPrice.gd" id="2_n7jpu"]
-[ext_resource type="Script" path="res://LudumAnts/Scenes/AntBehaviour.gd" id="3_o08ty"]
-[ext_resource type="Script" path="res://LudumAnts/Scenes/AntSpeed.gd" id="4_ahkx3"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/ant/AntBehaviour.gd" id="3_o08ty"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/ant/AntSpeed.gd" id="4_ahkx3"]
 
 [node name="Ant" type="Node2D"]
 script = ExtResource("1_ydmhr")
@@ -15,6 +15,7 @@ script = ExtResource("1_ydmhr")
 script = ExtResource("2_g5xvx")
 
 [node name="Sprite2D" type="Sprite2D" parent="SpriteParent"]
+z_index = 2
 texture = ExtResource("2_jqw2m")
 
 [node name="Speed" type="Node" parent="."]

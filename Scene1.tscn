@@ -1,31 +1,70 @@
-[gd_scene load_steps=25 format=3 uid="uid://cpnkpgp66f34y"]
+[gd_scene load_steps=77 format=3 uid="uid://cpnkpgp66f34y"]
 
-[ext_resource type="Texture2D" uid="uid://5qthh46snqiw" path="res://LudumAnts/Sprites/war_trench.png" id="1_cja37"]
-[ext_resource type="Script" path="res://LudumAnts/Scenes/Ants.gd" id="2_04n7g"]
+[ext_resource type="Texture2D" uid="uid://ci5gofm3fqbyl" path="res://LudumAnts/gobernor_domain.png" id="1_rgvoo"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/ant/Ants.gd" id="2_04n7g"]
 [ext_resource type="Texture2D" uid="uid://c6stji2gehdgf" path="res://LudumAnts/Sprites/Dragon/dragon_1.png" id="2_6tsr6"]
 [ext_resource type="Texture2D" uid="uid://b2kdli4108gix" path="res://Square.png" id="2_64ivj"]
-[ext_resource type="Script" path="res://LudumAnts/blueprint.gd" id="2_fwgii"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/blueprint.gd" id="2_fwgii"]
+[ext_resource type="Texture2D" uid="uid://bx51rhdhe076c" path="res://LudumAnts/pillager_kingdom.png" id="2_imxxr"]
 [ext_resource type="Shader" path="res://LudumAnts/GreenishShader.gdshader" id="3_gb7wl"]
-[ext_resource type="Script" path="res://LudumAnts/Scenes/Route.gd" id="3_kyroh"]
-[ext_resource type="Script" path="res://LudumAnts/Scenes/Spawner.gd" id="4_bfblq"]
-[ext_resource type="Script" path="res://TurretPlacing.gd" id="6_vpls0"]
-[ext_resource type="Script" path="res://LudumAnts/Scenes/gm.gd" id="7_0ujyl"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/Route.gd" id="3_kyroh"]
+[ext_resource type="Texture2D" uid="uid://bimbb4pur5hr4" path="res://LudumAnts/gobernor_treasure.png" id="3_oa0fl"]
+[ext_resource type="Texture2D" uid="uid://bjags4d4om8ay" path="res://LudumAnts/base_hud.png" id="4_6nsd6"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/Spawner.gd" id="4_bfblq"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/TurretPlacing.gd" id="6_vpls0"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/gm.gd" id="7_0ujyl"]
 [ext_resource type="PackedScene" uid="uid://dmoi3e0lgxw5l" path="res://LudumAnts/Scenes/beacon.tscn" id="7_ooprk"]
-[ext_resource type="Script" path="res://LudumAnts/Scenes/round.gd" id="8_lk4fj"]
-[ext_resource type="Script" path="res://LudumAnts/moneyScript.gd" id="12_1h1r3"]
-[ext_resource type="PackedScene" uid="uid://cn502344jwb6w" path="res://LudumAnts/Scenes/Dragon.tscn" id="12_s5paf"]
-[ext_resource type="Script" path="res://LudumAnts/city.gd" id="14_awr0w"]
-[ext_resource type="Script" path="res://LudumAnts/salamanderButton.gd" id="14_xg0aa"]
-[ext_resource type="Script" path="res://LudumAnts/money_text.gd" id="16_vifxg"]
-[ext_resource type="PackedScene" uid="uid://dxswqklcroix7" path="res://LudumAnts/Scenes/Toad.tscn" id="17_6mh36"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ha3c"]
-texture = ExtResource("2_64ivj")
-texture_region_size = Vector2i(200, 200)
+[ext_resource type="Script" path="res://LudumAnts/Scripts/round.gd" id="8_lk4fj"]
+[ext_resource type="Script" path="res://LudumAnts/waymark.gd" id="11_yxaug"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/moneyScript.gd" id="12_1h1r3"]
+[ext_resource type="Script" path="res://LudumAnts/loyalty.gd" id="12_xrnps"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/city.gd" id="14_awr0w"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/salamanderButton.gd" id="14_xg0aa"]
+[ext_resource type="Script" path="res://LudumAnts/hp.gd" id="15_bvhwg"]
+[ext_resource type="Script" path="res://LudumAnts/graveyard.gd" id="15_v8y02"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/money_text.gd" id="16_vifxg"]
+[ext_resource type="Script" path="res://LudumAnts/wrath.gd" id="17_h7eff"]
+[ext_resource type="Texture2D" uid="uid://ba8w4ga24fkov" path="res://LudumAnts/Sprites/Wrath/gobernor_will_shadow.png" id="18_21sek"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/toadButton.gd" id="18_jhwf2"]
+[ext_resource type="Texture2D" uid="uid://dqpqeg0ab8n3i" path="res://LudumAnts/Sprites/Wrath/gobernor_will.png" id="19_dajb5"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/lionButton.gd" id="20_7kdt2"]
+[ext_resource type="Texture2D" uid="uid://cqugm4tyrbmax" path="res://LudumAnts/Sprites/Catapult/canon_ball_explosion.png" id="20_ry8n2"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/scorpionButton.gd" id="21_g6pb5"]
+[ext_resource type="Script" path="res://LudumAnts/Wave.gd" id="23_6agqv"]
+[ext_resource type="Script" path="res://LudumAnts/loyalty_text.gd" id="23_ffqw0"]
+[ext_resource type="Texture2D" uid="uid://dmgmr5faygwx0" path="res://icon.svg" id="23_hhimi"]
+[ext_resource type="Texture2D" uid="uid://cur4rtjtumds2" path="res://LudumAnts/Sprites/water_wirm_attack_1.png" id="25_ftqdk"]
+[ext_resource type="Texture2D" uid="uid://bjdltrcsf1510" path="res://LudumAnts/Sprites/water_wirm_attack_2.png" id="26_d01va"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/WrathButton.gd" id="27_3qjca"]
+[ext_resource type="Texture2D" uid="uid://bbnhpgguhq13m" path="res://LudumAnts/Sprites/water_wirm_attack_3.png" id="27_pulkl"]
+[ext_resource type="Texture2D" uid="uid://i688u36fhgb1" path="res://LudumAnts/Sprites/Cat/great_catsassin_scene.png" id="30_44nhm"]
+[ext_resource type="Script" path="res://LudumAnts/catsassin.gd" id="30_vlqjd"]
+[ext_resource type="Texture2D" uid="uid://bvou8eb01j1fa" path="res://LudumAnts/Sprites/Cat/great_catsassin_attack_1.png" id="31_0ejxs"]
+[ext_resource type="Texture2D" uid="uid://cg8q8emk15bli" path="res://LudumAnts/Sprites/water_wyrm_scene.png" id="31_tlgnb"]
+[ext_resource type="Script" path="res://LudumAnts/WaveButton.gd" id="32_es056"]
+[ext_resource type="Texture2D" uid="uid://ccqt3m5et1ndl" path="res://LudumAnts/Sprites/Cat/great_catsassin_attack_2.png" id="32_ruagd"]
+[ext_resource type="Texture2D" uid="uid://ddg0wffdenly" path="res://LudumAnts/Sprites/Cat/great_catsassin_attack_3.png" id="33_fjad2"]
+[ext_resource type="Texture2D" uid="uid://g6pyrcxvid8c" path="res://LudumAnts/Sprites/Cat/great_catsassin_attack_4.png" id="34_krj00"]
+[ext_resource type="Texture2D" uid="uid://b422dhkdmevkv" path="res://LudumAnts/Sprites/Icons/icon_button.png" id="39_fjjy7"]
+[ext_resource type="Texture2D" uid="uid://bn0xmq4wk2usx" path="res://LudumAnts/Sprites/Icons/dragon_icon.png" id="41_07ghl"]
+[ext_resource type="Texture2D" uid="uid://c6xwvtdvujpw6" path="res://LudumAnts/Sprites/Icons/frog_icon.png" id="43_tavt4"]
+[ext_resource type="Script" path="res://LudumAnts/CatButton.gd" id="44_q1qu7"]
+[ext_resource type="Texture2D" uid="uid://no017d40ja8x" path="res://LudumAnts/Sprites/HealthBar/health_bar_base.png" id="45_5vcqx"]
+[ext_resource type="Texture2D" uid="uid://fq3yir3ueb2u" path="res://LudumAnts/Sprites/Icons/ant_lion_icon.png" id="45_xkgmo"]
+[ext_resource type="Texture2D" uid="uid://citbi0qy1hf0r" path="res://LudumAnts/Sprites/HealthBar/health_bar_contour.png" id="46_qbihp"]
+[ext_resource type="Texture2D" uid="uid://gfrn6oedktdl" path="res://LudumAnts/Sprites/HealthBar/health_bar_color.png" id="47_c42vt"]
+[ext_resource type="Texture2D" uid="uid://b3uelp6opjnvx" path="res://LudumAnts/Sprites/Icons/scorpion_icon.png" id="47_h8who"]
+[ext_resource type="Texture2D" uid="uid://dnvqow2phhw4x" path="res://LudumAnts/Sprites/LoyaltyBar/loyalty_bar_base.png" id="49_i3t6s"]
+[ext_resource type="Texture2D" uid="uid://j5soll0fo6q1" path="res://LudumAnts/Sprites/LoyaltyBar/loyalty_bar_contour.png" id="50_ucbvc"]
+[ext_resource type="Texture2D" uid="uid://crecrl1p4x6ec" path="res://LudumAnts/Sprites/LoyaltyBar/loyalty_bar_color.png" id="51_o1j7c"]
+[ext_resource type="Texture2D" uid="uid://brq3vul8klxco" path="res://LudumAnts/Sprites/Icons/gobernor_will_icon.png" id="51_rbrnv"]
+[ext_resource type="Texture2D" uid="uid://ouweiedlee2h" path="res://LudumAnts/Sprites/Icons/great_catsassin_icon.png" id="51_x7db4"]
+[ext_resource type="Texture2D" uid="uid://ci4fr07nfaut1" path="res://LudumAnts/Sprites/Icons/water_wyrm_icon.png" id="53_kbb8c"]
+[ext_resource type="AudioStream" uid="uid://btlelbteqkf0e" path="res://LudumAnts/Music/Batalla master.mp3" id="61_xacrl"]
+[ext_resource type="Script" path="res://LudumAnts/music_main.gd" id="62_3ubqp"]
 
 [sub_resource type="TileSet" id="TileSet_lb3np"]
-tile_size = Vector2i(200, 200)
-sources/1 = SubResource("TileSetAtlasSource_8ha3c")
+tile_size = Vector2i(90, 90)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j7148"]
 radius = 150.0
@@ -33,7 +72,86 @@ radius = 150.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4emt5"]
 shader = ExtResource("3_gb7wl")
 
-[sub_resource type="FontFile" id="FontFile_3k8af"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pc5e7"]
+
+[sub_resource type="Animation" id="Animation_1aw1c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("23_hhimi")]
+}
+
+[sub_resource type="Animation" id="Animation_6b8ql"]
+resource_name = "wave"
+length = 0.75
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("25_ftqdk"), ExtResource("26_d01va"), ExtResource("27_pulkl")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ln32p"]
+_data = {
+"RESET": SubResource("Animation_1aw1c"),
+"wave": SubResource("Animation_6b8ql")
+}
+
+[sub_resource type="Animation" id="Animation_4fu3q"]
+resource_name = "Cut"
+length = 0.5
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cut:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("31_0ejxs"), ExtResource("32_ruagd"), ExtResource("33_fjad2"), ExtResource("34_krj00")]
+}
+
+[sub_resource type="Animation" id="Animation_kpry8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cut:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_op7ar"]
+_data = {
+"Cut": SubResource("Animation_4fu3q"),
+"RESET": SubResource("Animation_kpry8")
+}
+
+[sub_resource type="FontFile" id="FontFile_qnp3w"]
 cache/0/40/0/ascent = 0.0
 cache/0/40/0/descent = 0.0
 cache/0/40/0/underline_position = 0.0
@@ -44,33 +162,68 @@ cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
 
 [sub_resource type="Theme" id="Theme_i5y5a"]
-default_font = SubResource("FontFile_3k8af")
-default_font_size = 40
+default_font = SubResource("FontFile_qnp3w")
+default_font_size = 70
+
+[sub_resource type="FontFile" id="FontFile_7mnod"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_hombd"]
+default_font = SubResource("FontFile_7mnod")
 
 [node name="Scene" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
+z_index = -100
 position = Vector2(2885, 1630)
 scale = Vector2(3, 3)
-texture = ExtResource("1_cja37")
+texture = ExtResource("1_rgvoo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+z_index = 20
+z_as_relative = false
+texture = ExtResource("2_imxxr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background"]
+z_index = 20
+z_as_relative = false
+texture = ExtResource("3_oa0fl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background"]
+texture = ExtResource("4_6nsd6")
 
 [node name="BluePrint" type="TileMapLayer" parent="."]
+position = Vector2(4622, 326)
 tile_set = SubResource("TileSet_lb3np")
 script = ExtResource("2_fwgii")
 
-[node name="SalamanderPositioner" type="Node2D" parent="BluePrint"]
+[node name="TurretPlacer" type="Node2D" parent="BluePrint"]
 visible = false
 script = ExtResource("6_vpls0")
 
-[node name="Area2D" type="Area2D" parent="BluePrint/SalamanderPositioner"]
+[node name="Area2D" type="Area2D" parent="BluePrint/TurretPlacer"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BluePrint/SalamanderPositioner/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BluePrint/TurretPlacer/Area2D"]
 position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_j7148")
 
-[node name="Sprite2D" type="Sprite2D" parent="BluePrint/SalamanderPositioner"]
+[node name="Sprite2D" type="Sprite2D" parent="BluePrint/TurretPlacer"]
 z_index = 10
 material = SubResource("ShaderMaterial_4emt5")
 position = Vector2(-10, 115)
@@ -81,44 +234,260 @@ position = Vector2(4840, 1258)
 
 [node name="Beacons" type="Node" parent="BluePrint"]
 
+[node name="Beacon1" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(810, 2880)
+
 [node name="Beacon2" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(900, 2900)
+position = Vector2(810, 2790)
 
 [node name="Beacon3" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(1100, 2700)
-
-[node name="Beacon4" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(1300, 2500)
+position = Vector2(900, 2790)
 
 [node name="Beacon5" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(1300, 2300)
+position = Vector2(720, 2880)
 
 [node name="Beacon6" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(1500, 2300)
+position = Vector2(900, 2700)
 
 [node name="Beacon7" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(1700, 2300)
-
-[node name="Beacon8" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(1700, 2500)
+position = Vector2(1170, 2250)
 
 [node name="Beacon9" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(1900, 2700)
+position = Vector2(990, 2610)
 
 [node name="Beacon10" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(1900, 2500)
-
-[node name="Beacon11" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(2100, 2500)
+position = Vector2(1080, 2520)
 
 [node name="Beacon12" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(2100, 2300)
-
-[node name="Beacon13" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(2300, 2300)
+position = Vector2(1170, 2160)
 
 [node name="Beacon14" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
-position = Vector2(2500, 2500)
+position = Vector2(1080, 2430)
+
+[node name="Beacon15" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1350, 2160)
+
+[node name="Beacon16" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1080, 2340)
+
+[node name="Beacon17" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1440, 2250)
+
+[node name="Beacon18" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2070, 2160)
+
+[node name="Beacon19" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1530, 2430)
+
+[node name="Beacon20" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1530, 2593)
+
+[node name="Beacon21" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1710, 2610)
+
+[node name="Beacon22" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1890, 2610)
+
+[node name="Beacon23" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1890, 2430)
+
+[node name="Beacon24" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2250, 2160)
+
+[node name="Beacon25" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2340, 2340)
+
+[node name="Beacon26" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2430, 2520)
+
+[node name="Beacon27" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2520, 2610)
+
+[node name="Beacon28" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2700, 2610)
+
+[node name="Beacon29" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2880, 2610)
+
+[node name="Beacon30" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3060, 2610)
+
+[node name="Beacon31" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3240, 2520)
+
+[node name="Beacon32" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3330, 2340)
+
+[node name="Beacon33" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3420, 2160)
+
+[node name="Beacon34" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3510, 1980)
+
+[node name="Beacon35" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3510, 1800)
+
+[node name="Beacon36" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3600, 1620)
+
+[node name="Beacon37" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3780, 1530)
+
+[node name="Beacon38" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3960, 1530)
+
+[node name="Beacon39" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4230, 1620)
+
+[node name="Beacon40" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4410, 1800)
+
+[node name="Beacon41" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4410, 1980)
+
+[node name="Beacon42" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4410, 2160)
+
+[node name="Beacon43" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4320, 2340)
+
+[node name="Beacon44" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4140, 2430)
+
+[node name="Beacon45" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3960, 2430)
+
+[node name="Beacon46" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3780, 2430)
+
+[node name="Beacon47" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3600, 2340)
+
+[node name="Beacon48" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3240, 1980)
+
+[node name="Beacon49" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3060, 1800)
+
+[node name="Beacon50" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2790, 1800)
+
+[node name="Beacon51" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2070, 1800)
+
+[node name="Beacon52" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2250, 1350)
+
+[node name="Beacon53" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2790, 1350)
+
+[node name="Beacon54" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3060, 1350)
+
+[node name="Beacon55" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3330, 1350)
+
+[node name="Beacon56" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3600, 1350)
+
+[node name="Beacon57" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3870, 1350)
+
+[node name="Beacon58" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4140, 1350)
+
+[node name="Beacon59" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4410, 1350)
+
+[node name="Beacon60" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4410, 990)
+
+[node name="Beacon61" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2790, 990)
+
+[node name="Beacon62" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3060, 990)
+
+[node name="Beacon63" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3330, 990)
+
+[node name="Beacon64" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3600, 990)
+
+[node name="Beacon65" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3870, 990)
+
+[node name="Beacon66" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4140, 990)
+
+[node name="Beacon67" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2700, 630)
+
+[node name="Beacon68" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2970, 630)
+
+[node name="Beacon69" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3240, 630)
+
+[node name="Beacon70" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3510, 630)
+
+[node name="Beacon71" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3780, 630)
+
+[node name="Beacon72" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4050, 630)
+
+[node name="Beacon73" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2790, 270)
+
+[node name="Beacon74" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3060, 270)
+
+[node name="Beacon75" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3330, 270)
+
+[node name="Beacon76" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3600, 270)
+
+[node name="Beacon77" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(3870, 270)
+
+[node name="Beacon78" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4140, 270)
+
+[node name="Beacon79" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4410, 270)
+
+[node name="Beacon80" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(4320, 630)
+
+[node name="Beacon81" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2430, 270)
+
+[node name="Beacon82" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2160, 270)
+
+[node name="Beacon83" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2160, 720)
+
+[node name="Beacon84" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1980, 990)
+
+[node name="Beacon85" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1710, 810)
+
+[node name="Beacon86" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1710, 270)
+
+[node name="Beacon87" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1350, 270)
+
+[node name="Beacon88" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1350, 810)
+
+[node name="Beacon89" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(990, 990)
 
 [node name="Ants" type="Node" parent="."]
 script = ExtResource("2_04n7g")
@@ -129,168 +498,273 @@ script = ExtResource("3_kyroh")
 [node name="Spawner" type="Node" parent="Route"]
 script = ExtResource("4_bfblq")
 
-[node name="Waymark" type="Node2D" parent="Route"]
-position = Vector2(730, 3239)
+[node name="Shortcut" type="Node" parent="Route"]
 
-[node name="Waymark2" type="Node2D" parent="Route"]
-position = Vector2(950, 2898)
+[node name="Waymark" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(543, 2991)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark3" type="Node2D" parent="Route"]
-position = Vector2(1098, 2736)
+[node name="Waymark2" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(999, 2661)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark4" type="Node2D" parent="Route"]
-position = Vector2(1179, 2530)
+[node name="Waymark4" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(1167, 2194)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark5" type="Node2D" parent="Route"]
-position = Vector2(1273, 2444)
+[node name="Waymark5" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(1375, 2186)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark6" type="Node2D" parent="Route"]
-position = Vector2(1327, 2274)
+[node name="Waymark6" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(1647, 2594)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark7" type="Node2D" parent="Route"]
-position = Vector2(1448, 2179)
+[node name="Waymark9" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(1780, 2593)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark8" type="Node2D" parent="Route"]
-position = Vector2(1623, 2287)
+[node name="Waymark10" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(1910, 2365)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark9" type="Node2D" parent="Route"]
-position = Vector2(1740, 2570)
+[node name="Waymark11" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(2026, 2179)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark10" type="Node2D" parent="Route"]
-position = Vector2(1969, 2543)
+[node name="Waymark12" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(2051, 1797)
+script = ExtResource("11_yxaug")
+speedModifier = 0.3
 
-[node name="Waymark11" type="Node2D" parent="Route"]
-position = Vector2(2077, 2337)
+[node name="Waymark14" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(2281, 1793)
+script = ExtResource("11_yxaug")
+speedModifier = 0.3
 
-[node name="Waymark12" type="Node2D" parent="Route"]
-position = Vector2(2135, 2202)
+[node name="Waymark16" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(2236, 1372)
+script = ExtResource("11_yxaug")
+speedModifier = 0.3
 
-[node name="Waymark13" type="Node2D" parent="Route"]
-position = Vector2(2382, 2215)
+[node name="Waymark18" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(2505, 1373)
+script = ExtResource("11_yxaug")
+speedModifier = 0.3
 
-[node name="Waymark14" type="Node2D" parent="Route"]
-position = Vector2(2481, 2404)
+[node name="Waymark33" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(2541, 1307)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark15" type="Node2D" parent="Route"]
-position = Vector2(2593, 2561)
+[node name="Waymark37" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(2520, 1010)
+script = ExtResource("11_yxaug")
+speedModifier = 0.3
 
-[node name="Waymark16" type="Node2D" parent="Route"]
-position = Vector2(2948, 2548)
+[node name="Waymark40" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(2523, 607)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark17" type="Node2D" parent="Route"]
-position = Vector2(3352, 2539)
+[node name="Waymark43" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(2516, 299)
+script = ExtResource("11_yxaug")
+speedModifier = 0.3
 
-[node name="Waymark18" type="Node2D" parent="Route"]
-position = Vector2(3488, 2102)
+[node name="Waymark46" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(2192, 252)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark19" type="Node2D" parent="Route"]
-position = Vector2(3688, 1744)
+[node name="Waymark47" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(2087, 1000)
+script = ExtResource("11_yxaug")
+speedModifier = 0.5
 
-[node name="Waymark20" type="Node2D" parent="Route"]
-position = Vector2(3948, 1576)
+[node name="Waymark48" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(1712, 949)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark21" type="Node2D" parent="Route"]
-position = Vector2(4320, 1630)
+[node name="Waymark49" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(1716, 254)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark22" type="Node2D" parent="Route"]
-position = Vector2(4529, 1734)
+[node name="Waymark50" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(1313, 253)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark23" type="Node2D" parent="Route"]
-position = Vector2(4574, 2014)
+[node name="Waymark51" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(1310, 947)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark24" type="Node2D" parent="Route"]
-position = Vector2(4406, 2252)
+[node name="Waymark52" type="Node2D" parent="Route/Shortcut"]
+position = Vector2(706, 958)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark25" type="Node2D" parent="Route"]
-position = Vector2(4231, 2379)
+[node name="Normal" type="Node" parent="Route"]
 
-[node name="Waymark26" type="Node2D" parent="Route"]
-position = Vector2(3840, 2265)
+[node name="Waymark" type="Node2D" parent="Route/Normal"]
+position = Vector2(543, 2991)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark27" type="Node2D" parent="Route"]
-position = Vector2(3634, 2163)
+[node name="Waymark2" type="Node2D" parent="Route/Normal"]
+position = Vector2(999, 2661)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark28" type="Node2D" parent="Route"]
-position = Vector2(3380, 1998)
+[node name="Waymark4" type="Node2D" parent="Route/Normal"]
+position = Vector2(1167, 2194)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark29" type="Node2D" parent="Route"]
-position = Vector2(2916, 1792)
+[node name="Waymark5" type="Node2D" parent="Route/Normal"]
+position = Vector2(1375, 2186)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark30" type="Node2D" parent="Route"]
-position = Vector2(2659, 1760)
+[node name="Waymark6" type="Node2D" parent="Route/Normal"]
+position = Vector2(1647, 2594)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark31" type="Node2D" parent="Route"]
-position = Vector2(2640, 1331)
+[node name="Waymark9" type="Node2D" parent="Route/Normal"]
+position = Vector2(1780, 2593)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark32" type="Node2D" parent="Route"]
-position = Vector2(2840, 1274)
+[node name="Waymark10" type="Node2D" parent="Route/Normal"]
+position = Vector2(1910, 2365)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark33" type="Node2D" parent="Route"]
-position = Vector2(3183, 1245)
+[node name="Waymark11" type="Node2D" parent="Route/Normal"]
+position = Vector2(2026, 2179)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark34" type="Node2D" parent="Route"]
-position = Vector2(3834, 1290)
+[node name="Waymark12" type="Node2D" parent="Route/Normal"]
+position = Vector2(2279, 2182)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark35" type="Node2D" parent="Route"]
-position = Vector2(4507, 1245)
+[node name="Waymark14" type="Node2D" parent="Route/Normal"]
+position = Vector2(2552, 2616)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark36" type="Node2D" parent="Route"]
-position = Vector2(4513, 960)
+[node name="Waymark16" type="Node2D" parent="Route/Normal"]
+position = Vector2(3123, 2619)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark37" type="Node2D" parent="Route"]
-position = Vector2(3859, 957)
+[node name="Waymark18" type="Node2D" parent="Route/Normal"]
+position = Vector2(3496, 1811)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark38" type="Node2D" parent="Route"]
-position = Vector2(3240, 941)
+[node name="Waymark19" type="Node2D" parent="Route/Normal"]
+position = Vector2(3739, 1597)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark39" type="Node2D" parent="Route"]
-position = Vector2(2853, 944)
+[node name="Waymark20" type="Node2D" parent="Route/Normal"]
+position = Vector2(4078, 1576)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark40" type="Node2D" parent="Route"]
-position = Vector2(2854, 652)
+[node name="Waymark21" type="Node2D" parent="Route/Normal"]
+position = Vector2(4345, 1766)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark41" type="Node2D" parent="Route"]
-position = Vector2(3502, 623)
+[node name="Waymark22" type="Node2D" parent="Route/Normal"]
+position = Vector2(4424, 2079)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark42" type="Node2D" parent="Route"]
-position = Vector2(3854, 599)
+[node name="Waymark23" type="Node2D" parent="Route/Normal"]
+position = Vector2(4178, 2362)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark43" type="Node2D" parent="Route"]
-position = Vector2(4410, 587)
+[node name="Waymark26" type="Node2D" parent="Route/Normal"]
+position = Vector2(3942, 2423)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark44" type="Node2D" parent="Route"]
-position = Vector2(4530, 587)
+[node name="Waymark27" type="Node2D" parent="Route/Normal"]
+position = Vector2(3665, 2338)
+script = ExtResource("11_yxaug")
+speedModifier = 0.5
 
-[node name="Waymark45" type="Node2D" parent="Route"]
-position = Vector2(4502, 315)
+[node name="Waymark28" type="Node2D" parent="Route/Normal"]
+position = Vector2(3479, 2171)
+script = ExtResource("11_yxaug")
+speedModifier = 0.5
 
-[node name="Waymark46" type="Node2D" parent="Route"]
-position = Vector2(2350, 331)
+[node name="Waymark29" type="Node2D" parent="Route/Normal"]
+position = Vector2(3284, 2010)
+script = ExtResource("11_yxaug")
+speedModifier = 0.5
 
-[node name="Waymark47" type="Node2D" parent="Route"]
-position = Vector2(2322, 1107)
+[node name="Waymark30" type="Node2D" parent="Route/Normal"]
+position = Vector2(3063, 1831)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark48" type="Node2D" parent="Route"]
-position = Vector2(1902, 1079)
+[node name="Waymark31" type="Node2D" parent="Route/Normal"]
+position = Vector2(2787, 1830)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark49" type="Node2D" parent="Route"]
-position = Vector2(1874, 339)
+[node name="Waymark32" type="Node2D" parent="Route/Normal"]
+position = Vector2(2560, 1823)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark50" type="Node2D" parent="Route"]
-position = Vector2(1454, 315)
+[node name="Waymark33" type="Node2D" parent="Route/Normal"]
+position = Vector2(2541, 1307)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark51" type="Node2D" parent="Route"]
-position = Vector2(1398, 1103)
+[node name="Waymark34" type="Node2D" parent="Route/Normal"]
+position = Vector2(4386, 1296)
+script = ExtResource("11_yxaug")
 
-[node name="Waymark52" type="Node2D" parent="Route"]
-position = Vector2(726, 1091)
+[node name="Waymark36" type="Node2D" parent="Route/Normal"]
+position = Vector2(4389, 949)
+script = ExtResource("11_yxaug")
+
+[node name="Waymark37" type="Node2D" parent="Route/Normal"]
+position = Vector2(2527, 946)
+script = ExtResource("11_yxaug")
+
+[node name="Waymark40" type="Node2D" parent="Route/Normal"]
+position = Vector2(2523, 607)
+script = ExtResource("11_yxaug")
+
+[node name="Waymark41" type="Node2D" parent="Route/Normal"]
+position = Vector2(4390, 598)
+script = ExtResource("11_yxaug")
+
+[node name="Waymark43" type="Node2D" parent="Route/Normal"]
+position = Vector2(4390, 253)
+script = ExtResource("11_yxaug")
+
+[node name="Waymark46" type="Node2D" parent="Route/Normal"]
+position = Vector2(2192, 252)
+script = ExtResource("11_yxaug")
+
+[node name="Waymark47" type="Node2D" parent="Route/Normal"]
+position = Vector2(2087, 1000)
+script = ExtResource("11_yxaug")
+speedModifier = 0.5
+
+[node name="Waymark48" type="Node2D" parent="Route/Normal"]
+position = Vector2(1712, 949)
+script = ExtResource("11_yxaug")
+
+[node name="Waymark49" type="Node2D" parent="Route/Normal"]
+position = Vector2(1716, 254)
+script = ExtResource("11_yxaug")
+
+[node name="Waymark50" type="Node2D" parent="Route/Normal"]
+position = Vector2(1313, 253)
+script = ExtResource("11_yxaug")
+
+[node name="Waymark51" type="Node2D" parent="Route/Normal"]
+position = Vector2(1310, 947)
+script = ExtResource("11_yxaug")
+
+[node name="Waymark52" type="Node2D" parent="Route/Normal"]
+position = Vector2(706, 958)
+script = ExtResource("11_yxaug")
 
 [node name="GM" type="Node" parent="."]
 script = ExtResource("7_0ujyl")
 
 [node name="HP" type="Node" parent="GM"]
+script = ExtResource("15_bvhwg")
 
 [node name="Loyalty" type="Node" parent="GM"]
+script = ExtResource("12_xrnps")
 
 [node name="Money" type="Node" parent="GM"]
 script = ExtResource("12_1h1r3")
@@ -310,11 +784,95 @@ zoom = Vector2(0.2, 0.2)
 [node name="City" type="Node" parent="."]
 script = ExtResource("14_awr0w")
 
-[node name="Toad" parent="." instance=ExtResource("17_6mh36")]
-position = Vector2(1855, 2290)
+[node name="Graveyard" type="Node" parent="."]
+script = ExtResource("15_v8y02")
 
-[node name="Dragon" parent="." instance=ExtResource("12_s5paf")]
-position = Vector2(1495, 2570)
+[node name="Abilities" type="Node" parent="."]
+
+[node name="Wrath" type="Node2D" parent="Abilities"]
+z_index = 15
+script = ExtResource("17_h7eff")
+
+[node name="Shadow" type="Sprite2D" parent="Abilities/Wrath"]
+visible = false
+clip_children = 2
+material = SubResource("ShaderMaterial_pc5e7")
+position = Vector2(107, 79)
+texture = ExtResource("18_21sek")
+
+[node name="Sprite2D" type="Sprite2D" parent="Abilities/Wrath/Shadow"]
+self_modulate = Color(0.356863, 0, 0, 1)
+scale = Vector2(34.8952, 31.2202)
+texture = ExtResource("2_64ivj")
+
+[node name="Hit" type="Sprite2D" parent="Abilities/Wrath"]
+visible = false
+position = Vector2(107, 79)
+texture = ExtResource("19_dajb5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Abilities/Wrath/Hit"]
+z_index = -1
+position = Vector2(-85, -74)
+texture = ExtResource("20_ry8n2")
+
+[node name="Wave" type="Node2D" parent="Abilities"]
+script = ExtResource("23_6agqv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Abilities/Wave"]
+visible = false
+position = Vector2(0, 10)
+scale = Vector2(2.3095, 2.3095)
+texture = ExtResource("23_hhimi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Abilities/Wave"]
+libraries = {
+"": SubResource("AnimationLibrary_ln32p")
+}
+autoplay = "wave"
+
+[node name="FadeToBlack" type="Sprite2D" parent="Abilities/Wave"]
+visible = false
+self_modulate = Color(0, 0, 0, 0.611765)
+z_index = 30
+z_as_relative = false
+position = Vector2(2879, 1411)
+scale = Vector2(500, 500)
+texture = ExtResource("2_64ivj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Abilities/Wave/FadeToBlack"]
+position = Vector2(1.802, -5.028)
+rotation = 3.14159
+scale = Vector2(0.008, -0.008)
+texture = ExtResource("31_tlgnb")
+
+[node name="Catsassin" type="Node2D" parent="Abilities"]
+script = ExtResource("30_vlqjd")
+
+[node name="FadeToBlack" type="Sprite2D" parent="Abilities/Catsassin"]
+visible = false
+self_modulate = Color(0, 0, 0, 0.611765)
+z_index = 30
+z_as_relative = false
+position = Vector2(2879, 1411)
+scale = Vector2(500, 500)
+texture = ExtResource("2_64ivj")
+
+[node name="Eyes" type="Sprite2D" parent="Abilities/Catsassin"]
+visible = false
+z_index = 50
+position = Vector2(4230, 2991)
+scale = Vector2(0.395343, 0.395343)
+texture = ExtResource("30_44nhm")
+
+[node name="Cut" type="Sprite2D" parent="Abilities/Catsassin"]
+visible = false
+z_index = 31
+position = Vector2(2632, 2430)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Abilities/Catsassin"]
+libraries = {
+"": SubResource("AnimationLibrary_op7ar")
+}
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -324,28 +882,363 @@ offset_bottom = 40.0
 
 [node name="MoneyText" type="RichTextLabel" parent="UI"]
 layout_mode = 0
-offset_left = 4920.0
-offset_top = 457.0
-offset_right = 5146.0
-offset_bottom = 567.0
+offset_left = 5042.0
+offset_top = 501.0
+offset_right = 5268.0
+offset_bottom = 611.0
 theme = SubResource("Theme_i5y5a")
-theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "15"
 tab_size = 10
 script = ExtResource("16_vifxg")
+
+[node name="LoyaltyText" type="RichTextLabel" parent="UI"]
+z_index = 22
+layout_mode = 0
+offset_left = 5118.0
+offset_top = 2324.0
+offset_right = 5344.0
+offset_bottom = 2434.0
+theme = SubResource("Theme_i5y5a")
+text = "15"
+tab_size = 10
+script = ExtResource("23_ffqw0")
 
 [node name="Shop" type="Control" parent="UI"]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Salamander" type="TextureButton" parent="UI/Shop"]
-z_index = 150
+[node name="Toad" type="TextureButton" parent="UI/Shop"]
 layout_mode = 0
-offset_left = 5231.0
-offset_top = 820.0
-offset_right = 5263.0
-offset_bottom = 852.0
-scale = Vector2(16.67, 7.92609)
-texture_normal = ExtResource("2_64ivj")
+offset_left = 4746.0
+offset_top = 579.0
+offset_right = 5046.0
+offset_bottom = 674.0
+scale = Vector2(3.73185, 3.73185)
+texture_normal = ExtResource("39_fjjy7")
+script = ExtResource("18_jhwf2")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Shop/Toad"]
+z_index = 1
+layout_mode = 0
+offset_left = 174.98
+offset_right = 279.98
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("43_tavt4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Shop/Toad"]
+z_index = 1
+layout_mode = 0
+offset_left = 71.0104
+offset_top = 35.9071
+offset_right = 181.01
+offset_bottom = 64.9071
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "Behemoth"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/Shop/Toad"]
+z_index = 1
+layout_mode = 0
+offset_left = 34.0
+offset_top = 37.0
+offset_right = 60.0
+offset_bottom = 66.0
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "20"
+
+[node name="Salamander" type="TextureButton" parent="UI/Shop"]
+layout_mode = 0
+offset_left = 4746.0
+offset_top = 810.0
+offset_right = 5046.0
+offset_bottom = 905.0
+scale = Vector2(3.73185, 3.73185)
+texture_normal = ExtResource("39_fjjy7")
 script = ExtResource("14_xg0aa")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Shop/Salamander"]
+z_index = 1
+layout_mode = 0
+offset_left = 174.98
+offset_right = 279.98
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("41_07ghl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Shop/Salamander"]
+z_index = 1
+layout_mode = 0
+offset_left = 70.4744
+offset_top = 36.711
+offset_right = 179.474
+offset_bottom = 65.711
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "Elder Dragon"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/Shop/Salamander"]
+z_index = 1
+layout_mode = 0
+offset_left = 34.0
+offset_top = 37.0
+offset_right = 60.0
+offset_bottom = 66.0
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "20"
+
+[node name="Lion" type="TextureButton" parent="UI/Shop"]
+layout_mode = 0
+offset_left = 4746.0
+offset_top = 1053.0
+offset_right = 5046.0
+offset_bottom = 1148.0
+scale = Vector2(3.73185, 3.73185)
+texture_normal = ExtResource("39_fjjy7")
+script = ExtResource("20_7kdt2")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Shop/Lion"]
+z_index = 1
+layout_mode = 0
+offset_left = 174.98
+offset_right = 279.98
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("45_xkgmo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Shop/Lion"]
+z_index = 1
+layout_mode = 0
+offset_left = 70.2064
+offset_top = 29.208
+offset_right = 197.206
+offset_bottom = 68.208
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "Crawler of the Depths"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/Shop/Lion"]
+z_index = 1
+layout_mode = 0
+offset_left = 34.0
+offset_top = 37.0
+offset_right = 60.0
+offset_bottom = 66.0
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "30"
+
+[node name="Scorpion" type="TextureButton" parent="UI/Shop"]
+layout_mode = 0
+offset_left = 4746.0
+offset_top = 1307.0
+offset_right = 5046.0
+offset_bottom = 1402.0
+scale = Vector2(3.73185, 3.73185)
+texture_normal = ExtResource("39_fjjy7")
+script = ExtResource("21_g6pb5")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Shop/Scorpion"]
+z_index = 1
+layout_mode = 0
+offset_left = 174.98
+offset_right = 279.98
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("47_h8who")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Shop/Scorpion"]
+z_index = 1
+layout_mode = 0
+offset_left = 69.1346
+offset_top = 28.6721
+offset_right = 178.135
+offset_bottom = 73.6721
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "Nature's Trebuchet"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/Shop/Scorpion"]
+z_index = 1
+layout_mode = 0
+offset_left = 34.0
+offset_top = 37.0
+offset_right = 60.0
+offset_bottom = 66.0
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "40"
+
+[node name="Abilities" type="Control" parent="UI"]
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 50.0
+offset_bottom = 44.0
+
+[node name="Wrath" type="TextureButton" parent="UI/Abilities"]
+layout_mode = 0
+offset_left = 4736.0
+offset_top = 2419.0
+offset_right = 5036.0
+offset_bottom = 2514.0
+scale = Vector2(3.73185, 3.73185)
+texture_normal = ExtResource("39_fjjy7")
+script = ExtResource("27_3qjca")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Abilities/Wrath"]
+z_index = 1
+layout_mode = 0
+offset_left = 174.98
+offset_right = 279.98
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("51_rbrnv")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Abilities/Wrath"]
+z_index = 1
+layout_mode = 0
+offset_left = 71.0103
+offset_top = 28.9401
+offset_right = 207.01
+offset_bottom = 66.9401
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "Will of the
+Governor"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/Abilities/Wrath"]
+z_index = 1
+layout_mode = 0
+offset_left = 34.0
+offset_top = 37.0
+offset_right = 60.0
+offset_bottom = 66.0
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "20"
+
+[node name="Cat" type="TextureButton" parent="UI/Abilities"]
+layout_mode = 0
+offset_left = 4736.0
+offset_top = 2669.0
+offset_right = 5036.0
+offset_bottom = 2764.0
+scale = Vector2(3.73185, 3.73185)
+texture_normal = ExtResource("39_fjjy7")
+script = ExtResource("44_q1qu7")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Abilities/Cat"]
+z_index = 1
+layout_mode = 0
+offset_left = 174.98
+offset_right = 279.98
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("51_x7db4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Abilities/Cat"]
+z_index = 1
+layout_mode = 0
+offset_left = 71.0103
+offset_top = 28.9401
+offset_right = 207.01
+offset_bottom = 66.9401
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "Creed of the
+Catssassins"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/Abilities/Cat"]
+z_index = 1
+layout_mode = 0
+offset_left = 34.0
+offset_top = 37.0
+offset_right = 60.0
+offset_bottom = 66.0
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "20"
+
+[node name="Wave" type="TextureButton" parent="UI/Abilities"]
+layout_mode = 0
+offset_left = 4736.0
+offset_top = 2919.0
+offset_right = 5036.0
+offset_bottom = 3014.0
+scale = Vector2(3.73185, 3.73185)
+texture_normal = ExtResource("39_fjjy7")
+script = ExtResource("32_es056")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Abilities/Wave"]
+z_index = 1
+layout_mode = 0
+offset_left = 174.98
+offset_right = 279.98
+offset_bottom = 100.0
+mouse_filter = 2
+texture = ExtResource("53_kbb8c")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Abilities/Wave"]
+z_index = 1
+layout_mode = 0
+offset_left = 71.0103
+offset_top = 28.9401
+offset_right = 207.01
+offset_bottom = 66.9401
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "Wrath of the
+Water Wyrm"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/Abilities/Wave"]
+z_index = 1
+layout_mode = 0
+offset_left = 34.0
+offset_top = 37.0
+offset_right = 60.0
+offset_bottom = 66.0
+mouse_filter = 2
+theme = SubResource("Theme_hombd")
+text = "20"
+
+[node name="OtherUi" type="Node2D" parent="."]
+
+[node name="HealthBar" type="Node2D" parent="OtherUi"]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="OtherUi/HealthBar"]
+z_index = 21
+offset_left = -77.0
+offset_top = -47.0001
+offset_right = 193.0
+offset_bottom = 32.9999
+scale = Vector2(4.80483, 4.80483)
+value = 100.0
+texture_under = ExtResource("45_5vcqx")
+texture_over = ExtResource("46_qbihp")
+texture_progress = ExtResource("47_c42vt")
+
+[node name="LoyaltyBar" type="Node2D" parent="OtherUi"]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="OtherUi/LoyaltyBar"]
+z_index = 21
+offset_left = 4761.0
+offset_top = 2222.0
+offset_right = 5131.0
+offset_bottom = 2317.0
+scale = Vector2(2.88604, 2.88604)
+value = 100.0
+texture_under = ExtResource("49_i3t6s")
+texture_over = ExtResource("50_ucbvc")
+texture_progress = ExtResource("51_o1j7c")
+
+[node name="Sound" type="Node" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound"]
+stream = ExtResource("61_xacrl")
+autoplay = true
+parameters/looping = true
+script = ExtResource("62_3ubqp")

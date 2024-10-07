@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgtmln8wjp78"]
+
+[ext_resource type="Texture2D" uid="uid://db47sc25dxkqn" path="res://LudumAnts/Sprites/pillagers_death.png" id="1_i3djk"]
+[ext_resource type="Script" path="res://AntDeath.gd" id="2_s571v"]
+
+[node name="AntDeath" type="Sprite2D"]
+z_index = 1
+texture = ExtResource("1_i3djk")
+script = ExtResource("2_s571v")

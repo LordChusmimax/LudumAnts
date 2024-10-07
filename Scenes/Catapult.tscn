@@ -1,15 +1,17 @@
-[gd_scene load_steps=16 format=3 uid="uid://cn502344jwb6w"]
+[gd_scene load_steps=18 format=3 uid="uid://du4nxf41vipfe"]
 
-[ext_resource type="Texture2D" uid="uid://c6stji2gehdgf" path="res://LudumAnts/Sprites/Dragon/dragon_1.png" id="1_1ao0n"]
-[ext_resource type="Script" path="res://LudumAnts/Scripts/dragonRange.gd" id="2_fp5ig"]
-[ext_resource type="Texture2D" uid="uid://cmfbkubr6gjvj" path="res://LudumAnts/Sprites/Dragon/dragon_2.png" id="3_2gwp2"]
-[ext_resource type="Texture2D" uid="uid://cu7h0i4n7o0aa" path="res://LudumAnts/Sprites/Dragon/dragon_3.png" id="4_5iqix"]
-[ext_resource type="Texture2D" uid="uid://dvo7puukikksq" path="res://LudumAnts/Sprites/Dragon/dragon_4.png" id="5_g1y3s"]
-[ext_resource type="Texture2D" uid="uid://blw045k174pes" path="res://LudumAnts/Sprites/Dragon/dragon_fire.png" id="6_btp36"]
-[ext_resource type="Texture2D" uid="uid://bbr5tq6j40t58" path="res://LudumAnts/Sprites/Dragon/fireball.png" id="7_83c6g"]
-[ext_resource type="Texture2D" uid="uid://cm6tyyl0k6u5f" path="res://LudumAnts/Sprites/Dragon/fireball_impact.png" id="7_mkcsr"]
-[ext_resource type="Script" path="res://LudumAnts/Scripts/dragonShot.gd" id="8_roirb"]
-[ext_resource type="Script" path="res://LudumAnts/Scripts/DragonShotHit.gd" id="9_qa4p8"]
+[ext_resource type="Texture2D" uid="uid://c6stji2gehdgf" path="res://LudumAnts/Sprites/Dragon/dragon_1.png" id="1_i1t1j"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/catapultRange.gd" id="2_0x3ff"]
+[ext_resource type="Texture2D" uid="uid://oqwu34a4asa4" path="res://LudumAnts/Sprites/Catapult/scorpion_4.png" id="3_ctcoh"]
+[ext_resource type="Texture2D" uid="uid://cjweg130uecpw" path="res://LudumAnts/Sprites/Catapult/scorpion_attack.png" id="4_2crba"]
+[ext_resource type="Texture2D" uid="uid://bwrb1nbd4kko4" path="res://LudumAnts/Sprites/Catapult/scorpion_1.png" id="5_tbrwd"]
+[ext_resource type="Texture2D" uid="uid://b8vj8c54w53ro" path="res://LudumAnts/Sprites/Catapult/scorpion_2.png" id="6_iqtqp"]
+[ext_resource type="Texture2D" uid="uid://dun2ng5jvol7b" path="res://LudumAnts/Sprites/Catapult/scorpion_3.png" id="7_oasmr"]
+[ext_resource type="Texture2D" uid="uid://bi2v1ll47u05k" path="res://LudumAnts/Sprites/Catapult/canon_ball.png" id="7_vskgy"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/catapultShot.gd" id="8_2e0kn"]
+[ext_resource type="Texture2D" uid="uid://ba35fi3m2sj4n" path="res://LudumAnts/Sprites/Catapult/canon_ball_impact.png" id="9_o1nyd"]
+[ext_resource type="Script" path="res://LudumAnts/Scripts/catapultShotHit.gd" id="10_yo7jl"]
+[ext_resource type="Texture2D" uid="uid://cqugm4tyrbmax" path="res://LudumAnts/Sprites/Catapult/canon_ball_explosion.png" id="12_fldp6"]
 
 [sub_resource type="Animation" id="Animation_dbre1"]
 resource_name = "Fire"
@@ -25,11 +27,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.25),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("5_g1y3s"), ExtResource("6_btp36")]
+"values": [ExtResource("3_ctcoh"), ExtResource("4_2crba")]
 }
 
 [sub_resource type="Animation" id="Animation_62c4j"]
 resource_name = "Idle"
+length = 1.25
 loop_mode = 1
 step = 1.33
 tracks/0/type = "value"
@@ -42,7 +45,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.33, 0.66, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("1_1ao0n"), ExtResource("3_2gwp2"), ExtResource("4_5iqix"), ExtResource("3_2gwp2")]
+"values": [ExtResource("5_tbrwd"), ExtResource("6_iqtqp"), ExtResource("7_oasmr"), ExtResource("6_iqtqp")]
 }
 
 [sub_resource type="Animation" id="Animation_03v4r"]
@@ -57,7 +60,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("1_1ao0n")]
+"values": [ExtResource("1_i1t1j")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_btxbv"]
@@ -75,16 +78,15 @@ radius = 120.0
 [node name="SpriteParent" type="Node2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="SpriteParent"]
-position = Vector2(-10, 115)
-texture = ExtResource("1_1ao0n")
+texture = ExtResource("1_i1t1j")
 
 [node name="FireOrigin" type="Node2D" parent="SpriteParent"]
 position = Vector2(0, 200)
 
 [node name="Range" type="Node2D" parent="."]
-script = ExtResource("2_fp5ig")
+script = ExtResource("2_0x3ff")
 
-[node name="DragonAnimation" type="AnimationPlayer" parent="."]
+[node name="CatapultAnimation" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_btxbv")
 }
@@ -92,13 +94,17 @@ autoplay = "Idle"
 
 [node name="Shot" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("7_83c6g")
-script = ExtResource("8_roirb")
+texture = ExtResource("7_vskgy")
+script = ExtResource("8_2e0kn")
 
 [node name="ShotHit" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("7_mkcsr")
-script = ExtResource("9_qa4p8")
+texture = ExtResource("9_o1nyd")
+script = ExtResource("10_yo7jl")
+
+[node name="Sprite2D" type="Sprite2D" parent="ShotHit"]
+z_index = -1
+texture = ExtResource("12_fldp6")
 
 [node name="Area2D" type="Area2D" parent="."]
 
