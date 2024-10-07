@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl5v3putx1qpw"]
+
+[ext_resource type="Script" path="res://LudumAnts/Scenes/LoseScript.gd" id="1_olf6b"]
+[ext_resource type="Texture2D" uid="uid://bjoa0amdud1m8" path="res://LudumAnts/Sprites/death_screen.png" id="2_mbkr4"]
+[ext_resource type="AudioStream" uid="uid://b0jalqsjf4w13" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Derrota.mp3" id="3_uwde8"]
+
+[node name="Lose" type="Node2D"]
+script = ExtResource("1_olf6b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.796475, 0.796475)
+texture = ExtResource("2_mbkr4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(2.26824, 0.112689)
+zoom = Vector2(0.75, 0.75)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_uwde8")
+autoplay = true

@@ -6,7 +6,7 @@ class_name SalamanderButton
 const Dragon_sprite = preload("res://LudumAnts/Sprites/Dragon/dragon_1.png")
 @onready var button_audio: AudioStreamPlayer = $ButtonAudio
 
-var cost: int = 20
+var cost: int = 30
 var active: bool = false
 @onready var money: Node = $"../../../GM/Money"
 

@@ -17,7 +17,9 @@ func _process(delta: float) -> void:
 	pass
 	
 func win():
+	get_tree().change_scene_to_file("res://LudumAnts/Scenes/win.tscn")
 	pass
 	
 func lose():
+	get_tree().change_scene_to_file("res://LudumAnts/Scenes/lose.tscn")
 	pass

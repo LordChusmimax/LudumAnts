@@ -6,7 +6,7 @@ class_name ToadButton
 const Toad_sprite = preload("res://LudumAnts/Sprites/Toad/frog_frame_1.png")
 @onready var button_audio: AudioStreamPlayer = $ButtonAudio
 
-var cost: int = 20
+var cost: int = 30
 var active: bool = false
 @onready var money: Node = $"../../../GM/Money"
 

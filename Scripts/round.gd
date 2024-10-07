@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 	spawncd+=delta
 	economycd+= delta
 	time += delta
+	
 	if time > 30:
 		difficulty = 1
 		minspawncd = 0.2
@@ -43,7 +44,7 @@ func _process(delta: float) -> void:
 		minspawncd = 0.05
 		economygains = 50
 	
-	if time > (60*7):
+	if time > (60*5):
 		gm.win()
 	
 	if economycd>=minseconomyncd:

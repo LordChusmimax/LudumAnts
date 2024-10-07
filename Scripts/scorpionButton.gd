@@ -5,7 +5,7 @@ class_name ScorpionButton
 @onready var shop: Control = $".."
 const Lion_sprite = preload("res://LudumAnts/Sprites/Catapult/scorpion_1.png")
 
-var cost: int = 40
+var cost: int = 100
 var active: bool = false
 @onready var money: Node = $"../../../GM/Money"
 @onready var button_audio: AudioStreamPlayer = $ButtonAudio

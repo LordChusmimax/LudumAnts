@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://qef5de4cr3u1"
+path="res://.godot/imported/Secuencia inicio master.mp3-2c537b624f175c8473b46d3e3c8941b7.mp3str"
+
+[deps]
+
+source_file="res://LudumAnts/Music/Secuencia inicio master.mp3"
+dest_files=["res://.godot/imported/Secuencia inicio master.mp3-2c537b624f175c8473b46d3e3c8941b7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
