@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xpni7w3o0mct"
+path="res://.godot/imported/Pasos.mp3-8569a2071a39b6cafd5ca40160a1cd90.mp3str"
+
+[deps]
+
+source_file="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Pasos.mp3"
+dest_files=["res://.godot/imported/Pasos.mp3-8569a2071a39b6cafd5ca40160a1cd90.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

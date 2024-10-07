@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0jalqsjf4w13"
+path="res://.godot/imported/Derrota.mp3-f85ed958f4a53df632e6541da4c7c261.mp3str"
+
+[deps]
+
+source_file="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Derrota.mp3"
+dest_files=["res://.godot/imported/Derrota.mp3-f85ed958f4a53df632e6541da4c7c261.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp78f1s40cyhl"
+path="res://.godot/imported/Boton normal.mp3-72893e0032df652b89b6ac56eeb837b4.mp3str"
+
+[deps]
+
+source_file="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Boton normal.mp3"
+dest_files=["res://.godot/imported/Boton normal.mp3-72893e0032df652b89b6ac56eeb837b4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

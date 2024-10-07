@@ -7,6 +7,7 @@ class_name CatButton
 
 @onready var shop: Control = $"../../Shop"
 @onready var abilities: Control = $".."
+@onready var button_audio: AudioStreamPlayer = $ButtonAudio
 
 var cost: int = 30
 var active: bool = false
@@ -21,12 +22,13 @@ func _process(delta: float) -> void:
 	pass
 
 func _pressed() -> void:
+	button_audio.play()
 	var was_active = active
 	turret_placer.hide()
 	for button: TextureButton in shop.get_children():
 		button.active = false
 	for button: TextureButton in abilities.get_children():
 		button.active = false
-	if cost<loyalty.loyalty and !catsassin.active:
+	if cost<=loyalty.loyalty and !catsassin.active:
 		catsassin.activate()
 		loyalty.loyalty -= cost

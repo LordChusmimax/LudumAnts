@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7ylkoucwh31a"
+path="res://.godot/imported/Escorpion colocar.mp3-55372da085ff233fc5e75aef06c37ff4.mp3str"
+
+[deps]
+
+source_file="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Escorpion colocar.mp3"
+dest_files=["res://.godot/imported/Escorpion colocar.mp3-55372da085ff233fc5e75aef06c37ff4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

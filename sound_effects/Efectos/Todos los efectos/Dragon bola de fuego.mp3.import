@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cs2uih7ogluh"
+path="res://.godot/imported/Dragon bola de fuego.mp3-b1c15ecf5d52d00e3f34ab1a0037a628.mp3str"
+
+[deps]
+
+source_file="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Dragon bola de fuego.mp3"
+dest_files=["res://.godot/imported/Dragon bola de fuego.mp3-b1c15ecf5d52d00e3f34ab1a0037a628.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

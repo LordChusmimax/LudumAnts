@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ttjt6u5libmj"
+path="res://.godot/imported/Dragon colocar.mp3-f590142c2502c99e88c973a0536df757.mp3str"
+
+[deps]
+
+source_file="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Dragon colocar.mp3"
+dest_files=["res://.godot/imported/Dragon colocar.mp3-f590142c2502c99e88c973a0536df757.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

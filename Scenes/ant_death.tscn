@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgtmln8wjp78"]
+[gd_scene load_steps=4 format=3 uid="uid://dgtmln8wjp78"]
 
 [ext_resource type="Texture2D" uid="uid://db47sc25dxkqn" path="res://LudumAnts/Sprites/pillagers_death.png" id="1_i3djk"]
 [ext_resource type="Script" path="res://AntDeath.gd" id="2_s571v"]
+[ext_resource type="AudioStream" uid="uid://b8i03l7alfmc6" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Hormiga muerte.mp3" id="3_3bn5p"]
 
 [node name="AntDeath" type="Sprite2D"]
 z_index = 1
 texture = ExtResource("1_i3djk")
 script = ExtResource("2_s571v")
+
+[node name="DeathAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3bn5p")

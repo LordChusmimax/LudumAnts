@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://cpnkpgp66f34y"]
+[gd_scene load_steps=83 format=3 uid="uid://cpnkpgp66f34y"]
 
 [ext_resource type="Texture2D" uid="uid://ci5gofm3fqbyl" path="res://LudumAnts/gobernor_domain.png" id="1_rgvoo"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/ant/Ants.gd" id="2_04n7g"]
@@ -35,19 +35,25 @@
 [ext_resource type="Texture2D" uid="uid://dmgmr5faygwx0" path="res://icon.svg" id="23_hhimi"]
 [ext_resource type="Texture2D" uid="uid://cur4rtjtumds2" path="res://LudumAnts/Sprites/water_wirm_attack_1.png" id="25_ftqdk"]
 [ext_resource type="Texture2D" uid="uid://bjdltrcsf1510" path="res://LudumAnts/Sprites/water_wirm_attack_2.png" id="26_d01va"]
+[ext_resource type="AudioStream" uid="uid://b6xqpolc7ve2l" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Grito samurai.mp3" id="26_r15yv"]
+[ext_resource type="AudioStream" uid="uid://0hu0gj8s6a60" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Golpe puño.mp3" id="27_1pq0i"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/WrathButton.gd" id="27_3qjca"]
 [ext_resource type="Texture2D" uid="uid://bbnhpgguhq13m" path="res://LudumAnts/Sprites/water_wirm_attack_3.png" id="27_pulkl"]
 [ext_resource type="Texture2D" uid="uid://i688u36fhgb1" path="res://LudumAnts/Sprites/Cat/great_catsassin_scene.png" id="30_44nhm"]
 [ext_resource type="Script" path="res://LudumAnts/catsassin.gd" id="30_vlqjd"]
 [ext_resource type="Texture2D" uid="uid://bvou8eb01j1fa" path="res://LudumAnts/Sprites/Cat/great_catsassin_attack_1.png" id="31_0ejxs"]
 [ext_resource type="Texture2D" uid="uid://cg8q8emk15bli" path="res://LudumAnts/Sprites/water_wyrm_scene.png" id="31_tlgnb"]
+[ext_resource type="AudioStream" uid="uid://bphgv22jxple" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Manguera larga.mp3" id="32_7th68"]
 [ext_resource type="Script" path="res://LudumAnts/WaveButton.gd" id="32_es056"]
 [ext_resource type="Texture2D" uid="uid://ccqt3m5et1ndl" path="res://LudumAnts/Sprites/Cat/great_catsassin_attack_2.png" id="32_ruagd"]
 [ext_resource type="Texture2D" uid="uid://ddg0wffdenly" path="res://LudumAnts/Sprites/Cat/great_catsassin_attack_3.png" id="33_fjad2"]
 [ext_resource type="Texture2D" uid="uid://g6pyrcxvid8c" path="res://LudumAnts/Sprites/Cat/great_catsassin_attack_4.png" id="34_krj00"]
+[ext_resource type="AudioStream" uid="uid://d2u8hx006swlu" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Arañazo.mp3" id="38_qvpiq"]
 [ext_resource type="Texture2D" uid="uid://b422dhkdmevkv" path="res://LudumAnts/Sprites/Icons/icon_button.png" id="39_fjjy7"]
+[ext_resource type="AudioStream" uid="uid://skjeybyotwhp" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Gato.mp3" id="39_i7ixg"]
 [ext_resource type="Texture2D" uid="uid://bn0xmq4wk2usx" path="res://LudumAnts/Sprites/Icons/dragon_icon.png" id="41_07ghl"]
 [ext_resource type="Texture2D" uid="uid://c6xwvtdvujpw6" path="res://LudumAnts/Sprites/Icons/frog_icon.png" id="43_tavt4"]
+[ext_resource type="AudioStream" uid="uid://dp78f1s40cyhl" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Boton normal.mp3" id="44_fcvh6"]
 [ext_resource type="Script" path="res://LudumAnts/CatButton.gd" id="44_q1qu7"]
 [ext_resource type="Texture2D" uid="uid://no017d40ja8x" path="res://LudumAnts/Sprites/HealthBar/health_bar_base.png" id="45_5vcqx"]
 [ext_resource type="Texture2D" uid="uid://fq3yir3ueb2u" path="res://LudumAnts/Sprites/Icons/ant_lion_icon.png" id="45_xkgmo"]
@@ -60,8 +66,8 @@
 [ext_resource type="Texture2D" uid="uid://brq3vul8klxco" path="res://LudumAnts/Sprites/Icons/gobernor_will_icon.png" id="51_rbrnv"]
 [ext_resource type="Texture2D" uid="uid://ouweiedlee2h" path="res://LudumAnts/Sprites/Icons/great_catsassin_icon.png" id="51_x7db4"]
 [ext_resource type="Texture2D" uid="uid://ci4fr07nfaut1" path="res://LudumAnts/Sprites/Icons/water_wyrm_icon.png" id="53_kbb8c"]
+[ext_resource type="AudioStream" uid="uid://cqteik0pgiyvh" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Boton exagerado.mp3" id="53_q5m0r"]
 [ext_resource type="AudioStream" uid="uid://btlelbteqkf0e" path="res://LudumAnts/Music/Batalla master.mp3" id="61_xacrl"]
-[ext_resource type="Script" path="res://LudumAnts/music_main.gd" id="62_3ubqp"]
 
 [sub_resource type="TileSet" id="TileSet_lb3np"]
 tile_size = Vector2i(90, 90)
@@ -815,6 +821,13 @@ z_index = -1
 position = Vector2(-85, -74)
 texture = ExtResource("20_ry8n2")
 
+[node name="ShoutAudio" type="AudioStreamPlayer" parent="Abilities/Wrath"]
+stream = ExtResource("26_r15yv")
+
+[node name="HitAudio" type="AudioStreamPlayer" parent="Abilities/Wrath"]
+stream = ExtResource("27_1pq0i")
+volume_db = 15.0
+
 [node name="Wave" type="Node2D" parent="Abilities"]
 script = ExtResource("23_6agqv")
 
@@ -845,6 +858,10 @@ rotation = 3.14159
 scale = Vector2(0.008, -0.008)
 texture = ExtResource("31_tlgnb")
 
+[node name="WaveAudio" type="AudioStreamPlayer" parent="Abilities/Wave"]
+stream = ExtResource("32_7th68")
+parameters/looping = true
+
 [node name="Catsassin" type="Node2D" parent="Abilities"]
 script = ExtResource("30_vlqjd")
 
@@ -873,6 +890,12 @@ position = Vector2(2632, 2430)
 libraries = {
 "": SubResource("AnimationLibrary_op7ar")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Abilities/Catsassin"]
+stream = ExtResource("38_qvpiq")
+
+[node name="CatSound" type="AudioStreamPlayer" parent="Abilities/Catsassin"]
+stream = ExtResource("39_i7ixg")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -949,6 +972,9 @@ mouse_filter = 2
 theme = SubResource("Theme_hombd")
 text = "20"
 
+[node name="ButtonAudio" type="AudioStreamPlayer" parent="UI/Shop/Toad"]
+stream = ExtResource("44_fcvh6")
+
 [node name="Salamander" type="TextureButton" parent="UI/Shop"]
 layout_mode = 0
 offset_left = 4746.0
@@ -989,6 +1015,9 @@ offset_bottom = 66.0
 mouse_filter = 2
 theme = SubResource("Theme_hombd")
 text = "20"
+
+[node name="ButtonAudio" type="AudioStreamPlayer" parent="UI/Shop/Salamander"]
+stream = ExtResource("44_fcvh6")
 
 [node name="Lion" type="TextureButton" parent="UI/Shop"]
 layout_mode = 0
@@ -1031,6 +1060,9 @@ mouse_filter = 2
 theme = SubResource("Theme_hombd")
 text = "30"
 
+[node name="ButtonAudio" type="AudioStreamPlayer" parent="UI/Shop/Lion"]
+stream = ExtResource("44_fcvh6")
+
 [node name="Scorpion" type="TextureButton" parent="UI/Shop"]
 layout_mode = 0
 offset_left = 4746.0
@@ -1071,6 +1103,9 @@ offset_bottom = 66.0
 mouse_filter = 2
 theme = SubResource("Theme_hombd")
 text = "40"
+
+[node name="ButtonAudio" type="AudioStreamPlayer" parent="UI/Shop/Scorpion"]
+stream = ExtResource("44_fcvh6")
 
 [node name="Abilities" type="Control" parent="UI"]
 anchors_preset = 0
@@ -1121,6 +1156,9 @@ mouse_filter = 2
 theme = SubResource("Theme_hombd")
 text = "20"
 
+[node name="ButtonAudio" type="AudioStreamPlayer" parent="UI/Abilities/Wrath"]
+stream = ExtResource("53_q5m0r")
+
 [node name="Cat" type="TextureButton" parent="UI/Abilities"]
 layout_mode = 0
 offset_left = 4736.0
@@ -1161,7 +1199,10 @@ offset_right = 60.0
 offset_bottom = 66.0
 mouse_filter = 2
 theme = SubResource("Theme_hombd")
-text = "20"
+text = "30"
+
+[node name="ButtonAudio" type="AudioStreamPlayer" parent="UI/Abilities/Cat"]
+stream = ExtResource("53_q5m0r")
 
 [node name="Wave" type="TextureButton" parent="UI/Abilities"]
 layout_mode = 0
@@ -1203,7 +1244,10 @@ offset_right = 60.0
 offset_bottom = 66.0
 mouse_filter = 2
 theme = SubResource("Theme_hombd")
-text = "20"
+text = "50"
+
+[node name="ButtonAudio" type="AudioStreamPlayer" parent="UI/Abilities/Wave"]
+stream = ExtResource("53_q5m0r")
 
 [node name="OtherUi" type="Node2D" parent="."]
 
@@ -1237,8 +1281,6 @@ texture_progress = ExtResource("51_o1j7c")
 
 [node name="Sound" type="Node" parent="."]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource("61_xacrl")
 autoplay = true
-parameters/looping = true
-script = ExtResource("62_3ubqp")

@@ -5,6 +5,7 @@ var speed: int = 1200
 var nextWaypointindex: int = 1
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var fade_to_black: Sprite2D = $FadeToBlack
+@onready var wave_audio: AudioStreamPlayer = $WaveAudio
 
 var antArray :Array[Ant] = []
 
@@ -45,6 +46,7 @@ func activate():
 	
 	fade_to_black.show()
 	await get_tree().create_timer(0.50).timeout
+	wave_audio.play()
 	fade_to_black.hide()
 	antArray = []
 	nextWaypointindex = 1
@@ -53,6 +55,7 @@ func activate():
 	position = route[0].global_position
 
 func goal():
+	wave_audio.stop()
 	active = false
 	sprite_2d.hide()
 	pass

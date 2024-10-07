@@ -5,6 +5,8 @@ class_name Wrath
 @onready var menu_limit: Node2D = $"../../BluePrint/MenuLimit"
 @onready var sprite_2d: Sprite2D = $Shadow/Sprite2D
 @onready var wrathButton: WrathButton = $"../../UI/Abilities/Wrath"
+@onready var shout_audio: AudioStreamPlayer = $ShoutAudio
+@onready var hit_audio: AudioStreamPlayer = $HitAudio
 
 var range: int = 150
 
@@ -60,6 +62,8 @@ func right_click_function():
 	
 func left_click_function():
 	if allowed:
+		hit_audio.play()
+		shout_audio.play()
 		hitting = true
 		active = false
 		wrathButton.active = false

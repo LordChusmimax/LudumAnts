@@ -8,9 +8,12 @@ var maxcd : float = 3
 
 @onready var shot: Sprite2D = $"../Shot"
 @onready var Catapult_anim: AnimationPlayer = $"../CatapultAnimation"
+@onready var audio_spawn: AudioStreamPlayer = $"../AudioSpawn"
+@onready var audio_fire: AudioStreamPlayer = $"../AudioFire"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	audio_spawn.play()
 	range = 1000
 	Catapult_anim.animation_set_next("Fire","Idle")
 	pass # Replace with function body.
@@ -34,6 +37,7 @@ func attack():
 			return
 
 func shoot(ant: Ant):
+	audio_fire.play()
 	Catapult_anim.current_animation = "Fire"
 	await get_tree().create_timer(0.25).timeout
 	if tower.position.distance_to(ant.position) <= range:

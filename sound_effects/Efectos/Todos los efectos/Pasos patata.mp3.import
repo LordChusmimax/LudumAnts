@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6a0gbul1lx6h"
+path="res://.godot/imported/Pasos patata.mp3-9c99411e543b40e95721196a05b26181.mp3str"
+
+[deps]
+
+source_file="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Pasos patata.mp3"
+dest_files=["res://.godot/imported/Pasos patata.mp3-9c99411e543b40e95721196a05b26181.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

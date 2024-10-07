@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkw0am1c5w6yl"
+path="res://.godot/imported/Escorpion catapulta.mp3-8e8707fbd17628e13ebba661c33ed0e7.mp3str"
+
+[deps]
+
+source_file="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Escorpion catapulta.mp3"
+dest_files=["res://.godot/imported/Escorpion catapulta.mp3-8e8707fbd17628e13ebba661c33ed0e7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

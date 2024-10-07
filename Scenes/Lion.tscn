@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://i6wk7gjw1qxy"]
+[gd_scene load_steps=21 format=3 uid="uid://i6wk7gjw1qxy"]
 
 [ext_resource type="Texture2D" uid="uid://c6stji2gehdgf" path="res://LudumAnts/Sprites/Dragon/dragon_1.png" id="1_iyh8c"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/lionRange.gd" id="2_nnkvf"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" path="res://LudumAnts/Scripts/lionShot.gd" id="11_6atg0"]
 [ext_resource type="Texture2D" uid="uid://cm6tyyl0k6u5f" path="res://LudumAnts/Sprites/Dragon/fireball_impact.png" id="12_3hc51"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/DragonShotHit.gd" id="13_bqu1v"]
+[ext_resource type="AudioStream" uid="uid://c3idjaiqwskwq" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Hleon colocar.mp3" id="14_yuygj"]
+[ext_resource type="AudioStream" uid="uid://dwl3ews6wyxx7" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Hleon ataque.mp3" id="15_bhl8h"]
 
 [sub_resource type="Animation" id="Animation_dbre1"]
 resource_name = "Attack"
@@ -171,3 +173,9 @@ script = ExtResource("13_bqu1v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_kki6c")
+
+[node name="AudioSpawn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_yuygj")
+
+[node name="AudioAttack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_bhl8h")

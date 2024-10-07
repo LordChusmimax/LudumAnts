@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://e08pp5b8jifm"]
+[gd_scene load_steps=9 format=3 uid="uid://e08pp5b8jifm"]
 
 [ext_resource type="Script" path="res://LudumAnts/Scripts/ant/Ant.gd" id="1_ydmhr"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/ant/AntHealth.gd" id="2_4a8gp"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://LudumAnts/Scripts/ant/AntPrice.gd" id="2_n7jpu"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/ant/AntBehaviour.gd" id="3_o08ty"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/ant/AntSpeed.gd" id="4_ahkx3"]
+[ext_resource type="AudioStream" uid="uid://d2u8hx006swlu" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Arañazo.mp3" id="8_0ijgv"]
 
 [node name="Ant" type="Node2D"]
 script = ExtResource("1_ydmhr")
@@ -29,3 +30,8 @@ script = ExtResource("2_n7jpu")
 
 [node name="Behaviour" type="Node" parent="."]
 script = ExtResource("3_o08ty")
+
+[node name="StepsAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_0ijgv")
+volume_db = -20.0
+parameters/looping = true

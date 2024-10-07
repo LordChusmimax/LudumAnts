@@ -8,10 +8,13 @@ var maxcd : float = 1
 
 @onready var shot: Node2D = $"../Shot"
 @onready var toad_anim: AnimationPlayer = $"../ToadAnimation"
+@onready var spawn_audio: AudioStreamPlayer = $"../SpawnAudio"
+@onready var tongue_audio: AudioStreamPlayer = $"../TongueAudio"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	range = 625
+	spawn_audio.play()
 	toad_anim.animation_set_next("Tongue","Idle")
 	pass # Replace with function body.
 
@@ -37,6 +40,7 @@ func attack():
 func shoot(ant: Ant):
 	toad_anim.current_animation = "Tongue"
 	await get_tree().create_timer(0.50).timeout
+	tongue_audio.play()
 	if tower.position.distance_to(ant.position) <= range:
 		shot.shoot(ant)
 		return

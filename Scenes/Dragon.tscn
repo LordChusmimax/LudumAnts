@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cn502344jwb6w"]
+[gd_scene load_steps=18 format=3 uid="uid://cn502344jwb6w"]
 
 [ext_resource type="Texture2D" uid="uid://c6stji2gehdgf" path="res://LudumAnts/Sprites/Dragon/dragon_1.png" id="1_1ao0n"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/dragonRange.gd" id="2_fp5ig"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cm6tyyl0k6u5f" path="res://LudumAnts/Sprites/Dragon/fireball_impact.png" id="7_mkcsr"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/dragonShot.gd" id="8_roirb"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/DragonShotHit.gd" id="9_qa4p8"]
+[ext_resource type="AudioStream" uid="uid://ttjt6u5libmj" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Dragon colocar.mp3" id="11_puouv"]
+[ext_resource type="AudioStream" uid="uid://cs2uih7ogluh" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Dragon bola de fuego.mp3" id="12_jbi7g"]
 
 [sub_resource type="Animation" id="Animation_dbre1"]
 resource_name = "Fire"
@@ -104,3 +106,9 @@ script = ExtResource("9_qa4p8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_kki6c")
+
+[node name="SpawnAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_puouv")
+
+[node name="FireAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_jbi7g")

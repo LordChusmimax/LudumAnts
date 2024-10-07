@@ -8,6 +8,7 @@ const Lion_sprite = preload("res://LudumAnts/Sprites/Catapult/scorpion_1.png")
 var cost: int = 40
 var active: bool = false
 @onready var money: Node = $"../../../GM/Money"
+@onready var button_audio: AudioStreamPlayer = $ButtonAudio
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,6 +20,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _pressed() -> void:
+	button_audio.play()
 	var was_active = active
 	for button: TextureButton in shop.get_children():
 		button.active = false

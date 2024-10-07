@@ -8,11 +8,14 @@ var maxcd : float = 1
 
 @onready var shot: Sprite2D = $"../Shot"
 @onready var dragon_anim: AnimationPlayer = $"../DragonAnimation"
+@onready var fire_audio: AudioStreamPlayer = $"../FireAudio"
+@onready var spawn_audio: AudioStreamPlayer = $"../SpawnAudio"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	range = 1000
 	dragon_anim.animation_set_next("Fire","Idle")
+	spawn_audio.play()
 	pass # Replace with function body.
 
 
@@ -35,6 +38,7 @@ func attack():
 
 func shoot(ant: Ant):
 	dragon_anim.current_animation = "Fire"
+	fire_audio.play()
 	await get_tree().create_timer(0.25).timeout
 	if tower.position.distance_to(ant.position) <= range:
 		shot.shoot(ant)

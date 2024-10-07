@@ -4,6 +4,7 @@ class_name SalamanderButton
 @onready var abilities: Control = $"../../Abilities"
 @onready var shop: Control = $".."
 const Dragon_sprite = preload("res://LudumAnts/Sprites/Dragon/dragon_1.png")
+@onready var button_audio: AudioStreamPlayer = $ButtonAudio
 
 var cost: int = 20
 var active: bool = false
@@ -19,6 +20,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _pressed() -> void:
+	button_audio.play()
 	var was_active = active
 	for button: TextureButton in shop.get_children():
 		button.active = false

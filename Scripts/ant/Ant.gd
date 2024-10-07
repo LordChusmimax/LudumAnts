@@ -7,10 +7,12 @@ class_name Ant
 @onready var health: AntHealth = $Health
 @onready var sprite_parent: Node2D = $SpriteParent
 const ANT_DEATH = preload("res://LudumAnts/Scenes/ant_death.tscn")
+@onready var steps_audio: AudioStreamPlayer = $StepsAudio
 var type: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	steps_audio.play()
 	pass # Replace with function body.
 
 

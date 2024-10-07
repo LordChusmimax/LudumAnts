@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://du4nxf41vipfe"]
+[gd_scene load_steps=21 format=3 uid="uid://du4nxf41vipfe"]
 
 [ext_resource type="Texture2D" uid="uid://c6stji2gehdgf" path="res://LudumAnts/Sprites/Dragon/dragon_1.png" id="1_i1t1j"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/catapultRange.gd" id="2_0x3ff"]
@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://ba35fi3m2sj4n" path="res://LudumAnts/Sprites/Catapult/canon_ball_impact.png" id="9_o1nyd"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/catapultShotHit.gd" id="10_yo7jl"]
 [ext_resource type="Texture2D" uid="uid://cqugm4tyrbmax" path="res://LudumAnts/Sprites/Catapult/canon_ball_explosion.png" id="12_fldp6"]
+[ext_resource type="AudioStream" uid="uid://b7ylkoucwh31a" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Escorpion colocar.mp3" id="13_6m5gl"]
+[ext_resource type="AudioStream" uid="uid://dkw0am1c5w6yl" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Escorpion catapulta.mp3" id="14_ygmdm"]
+[ext_resource type="AudioStream" uid="uid://bbpk0gicrlewe" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Escorpion catapulta impacto.mp3" id="15_rjurw"]
 
 [sub_resource type="Animation" id="Animation_dbre1"]
 resource_name = "Fire"
@@ -110,3 +113,12 @@ texture = ExtResource("12_fldp6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_kki6c")
+
+[node name="AudioSpawn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_6m5gl")
+
+[node name="AudioFire" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_ygmdm")
+
+[node name="AudioHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_rjurw")

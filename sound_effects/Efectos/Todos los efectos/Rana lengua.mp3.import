@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtid2lb8txmcg"
+path="res://.godot/imported/Rana lengua.mp3-a9500eca8dfa516ecdf31356760662f9.mp3str"
+
+[deps]
+
+source_file="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Rana lengua.mp3"
+dest_files=["res://.godot/imported/Rana lengua.mp3-a9500eca8dfa516ecdf31356760662f9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,62 @@
+[gd_scene load_steps=12 format=3 uid="uid://bhqjyheuf1lp1"]
+
+[ext_resource type="Texture2D" uid="uid://cdx2tc1p3a8nv" path="res://LudumAnts/Sprites/Intro/intro_2.png" id="1_3kyqq"]
+[ext_resource type="Texture2D" uid="uid://bspjlyuedy12s" path="res://LudumAnts/Sprites/Intro/intro_1.png" id="1_k76vs"]
+[ext_resource type="Texture2D" uid="uid://dg45rcef2ch4w" path="res://LudumAnts/Sprites/Intro/intro_3.png" id="2_10ccl"]
+[ext_resource type="Texture2D" uid="uid://bddwo4owvpdmo" path="res://LudumAnts/Sprites/Intro/intro_4.png" id="3_20j2m"]
+[ext_resource type="Texture2D" uid="uid://cowylnq0r6kc1" path="res://LudumAnts/Sprites/Intro/intro_5.png" id="4_oky6r"]
+[ext_resource type="Texture2D" uid="uid://bwqcryhrik00x" path="res://LudumAnts/Sprites/Intro/intro_6.png" id="5_dmv30"]
+[ext_resource type="Texture2D" uid="uid://8ty6kkiha214" path="res://LudumAnts/Sprites/Intro/intro_7.png" id="6_j4k2g"]
+[ext_resource type="Texture2D" uid="uid://cwvt73jvhlksf" path="res://LudumAnts/Sprites/Intro/intro_8.png" id="7_ct14x"]
+
+[sub_resource type="Animation" id="Animation_g7wc7"]
+resource_name = "Intro"
+length = 13.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6, 7.5, 9, 10.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_k76vs"), ExtResource("1_3kyqq"), ExtResource("2_10ccl"), ExtResource("3_20j2m"), ExtResource("4_oky6r"), ExtResource("5_dmv30"), ExtResource("6_j4k2g"), ExtResource("7_ct14x")]
+}
+
+[sub_resource type="Animation" id="Animation_mbe5j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gmqwo"]
+_data = {
+"Intro": SubResource("Animation_g7wc7"),
+"RESET": SubResource("Animation_mbe5j")
+}
+
+[node name="Intro" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.796475, 0.796475)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gmqwo")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(2.26824, 0.112689)
+zoom = Vector2(0.75, 0.75)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dxswqklcroix7"]
+[gd_scene load_steps=20 format=3 uid="uid://dxswqklcroix7"]
 
 [ext_resource type="Texture2D" uid="uid://c6stji2gehdgf" path="res://LudumAnts/Sprites/Dragon/dragon_1.png" id="1_p2ntg"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/toadRange.gd" id="2_xgs3p"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://cm6tyyl0k6u5f" path="res://LudumAnts/Sprites/Dragon/fireball_impact.png" id="9_fqay2"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/toadShot.gd" id="9_r8ag1"]
 [ext_resource type="Script" path="res://LudumAnts/Scripts/DragonShotHit.gd" id="10_ce620"]
+[ext_resource type="AudioStream" uid="uid://c5yl17xe40aru" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Rana colocar.mp3" id="13_2tlgs"]
+[ext_resource type="AudioStream" uid="uid://dtid2lb8txmcg" path="res://LudumAnts/sound_effects/Efectos/Todos los efectos/Rana lengua.mp3" id="14_4ipqn"]
 
 [sub_resource type="Animation" id="Animation_62c4j"]
 resource_name = "Idle"
@@ -123,3 +125,9 @@ script = ExtResource("10_ce620")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_kki6c")
+
+[node name="SpawnAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_2tlgs")
+
+[node name="TongueAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_4ipqn")

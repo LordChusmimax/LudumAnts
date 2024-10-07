@@ -6,6 +6,10 @@ var nextWaypointindex: int
 @onready var ant: Ant = $".."
 @onready var sprite_parent: Node2D = $"../SpriteParent"
 
+const PASOS = preload("res://LudumAnts/sound_effects/Efectos/Todos los efectos/Pasos.mp3")
+const PASOS_PATATA = preload("res://LudumAnts/sound_effects/Efectos/Todos los efectos/Pasos patata.mp3")
+@onready var steps_audio: AudioStreamPlayer = $"../StepsAudio"
+
 var direction: Vector2 
 
 # Called when the node enters the scene tree for the first time.
@@ -28,6 +32,14 @@ func move(delta: float):
 		speed = ant.getSpeed()
 	else:
 		speed = ant.getSpeed() * route[nextWaypointindex].speedModifier
+	
+	if ant.getSpeed()>0.7 and steps_audio.stream==PASOS_PATATA:
+		steps_audio.stream=PASOS
+		steps_audio.play()
+	elif ant.getSpeed()<= 0.7 and steps_audio.stream==PASOS_PATATA:
+		steps_audio.stream=PASOS_PATATA
+		steps_audio.play()
+		
 	
 	ant.position += direction * speed * delta
 

@@ -3,6 +3,8 @@ extends Node2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var fade_to_black: Sprite2D = $FadeToBlack
 @onready var eyes: Sprite2D = $Eyes
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var cat_sound: AudioStreamPlayer = $CatSound
 
 var active:bool
 # Called when the node enters the scene tree for the first time.
@@ -15,6 +17,7 @@ func _process(delta: float) -> void:
 	pass
 
 func activate():
+	cat_sound.play()
 	var ants : Array[Ant]
 	for ant: Ant in Ants.current.get_children():
 		ants.append(ant)
@@ -34,6 +37,7 @@ func activate():
 		cut.global_position = ants[i].global_position
 		animation_player.current_animation = "Cut"
 		animation_player.play()
+		audio_stream_player.play()
 		await get_tree().create_timer(0.20).timeout
 		ants[i].hit(10)
 		await get_tree().create_timer(0.30).timeout
