@@ -1,41 +1,124 @@
-[gd_scene load_steps=12 format=3 uid="uid://cpnkpgp66f34y"]
+[gd_scene load_steps=25 format=3 uid="uid://cpnkpgp66f34y"]
 
 [ext_resource type="Texture2D" uid="uid://5qthh46snqiw" path="res://LudumAnts/Sprites/war_trench.png" id="1_cja37"]
 [ext_resource type="Script" path="res://LudumAnts/Scenes/Ants.gd" id="2_04n7g"]
 [ext_resource type="Texture2D" uid="uid://c6stji2gehdgf" path="res://LudumAnts/Sprites/Dragon/dragon_1.png" id="2_6tsr6"]
+[ext_resource type="Texture2D" uid="uid://b2kdli4108gix" path="res://Square.png" id="2_64ivj"]
+[ext_resource type="Script" path="res://LudumAnts/blueprint.gd" id="2_fwgii"]
 [ext_resource type="Shader" path="res://LudumAnts/GreenishShader.gdshader" id="3_gb7wl"]
 [ext_resource type="Script" path="res://LudumAnts/Scenes/Route.gd" id="3_kyroh"]
 [ext_resource type="Script" path="res://LudumAnts/Scenes/Spawner.gd" id="4_bfblq"]
-[ext_resource type="Script" path="res://test.gd" id="6_vpls0"]
+[ext_resource type="Script" path="res://TurretPlacing.gd" id="6_vpls0"]
 [ext_resource type="Script" path="res://LudumAnts/Scenes/gm.gd" id="7_0ujyl"]
+[ext_resource type="PackedScene" uid="uid://dmoi3e0lgxw5l" path="res://LudumAnts/Scenes/beacon.tscn" id="7_ooprk"]
 [ext_resource type="Script" path="res://LudumAnts/Scenes/round.gd" id="8_lk4fj"]
+[ext_resource type="Script" path="res://LudumAnts/moneyScript.gd" id="12_1h1r3"]
+[ext_resource type="PackedScene" uid="uid://cn502344jwb6w" path="res://LudumAnts/Scenes/Dragon.tscn" id="12_s5paf"]
+[ext_resource type="Script" path="res://LudumAnts/city.gd" id="14_awr0w"]
+[ext_resource type="Script" path="res://LudumAnts/salamanderButton.gd" id="14_xg0aa"]
+[ext_resource type="Script" path="res://LudumAnts/money_text.gd" id="16_vifxg"]
+[ext_resource type="PackedScene" uid="uid://dxswqklcroix7" path="res://LudumAnts/Scenes/Toad.tscn" id="17_6mh36"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ha3c"]
+texture = ExtResource("2_64ivj")
+texture_region_size = Vector2i(200, 200)
 
 [sub_resource type="TileSet" id="TileSet_lb3np"]
-tile_shape = 3
 tile_size = Vector2i(200, 200)
+sources/1 = SubResource("TileSetAtlasSource_8ha3c")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7148"]
+radius = 150.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4emt5"]
 shader = ExtResource("3_gb7wl")
 
+[sub_resource type="FontFile" id="FontFile_3k8af"]
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_i5y5a"]
+default_font = SubResource("FontFile_3k8af")
+default_font_size = 40
+
 [node name="Scene" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(2878, 1623)
+position = Vector2(2885, 1630)
 scale = Vector2(3, 3)
 texture = ExtResource("1_cja37")
 
 [node name="BluePrint" type="TileMapLayer" parent="."]
-position = Vector2(4114, 1215)
 tile_set = SubResource("TileSet_lb3np")
+script = ExtResource("2_fwgii")
 
-[node name="Node2D" type="Node2D" parent="BluePrint"]
+[node name="SalamanderPositioner" type="Node2D" parent="BluePrint"]
+visible = false
 script = ExtResource("6_vpls0")
 
-[node name="Sprite2D" type="Sprite2D" parent="BluePrint/Node2D"]
-z_index = 100
+[node name="Area2D" type="Area2D" parent="BluePrint/SalamanderPositioner"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BluePrint/SalamanderPositioner/Area2D"]
+position = Vector2(1, 0)
+shape = SubResource("CircleShape2D_j7148")
+
+[node name="Sprite2D" type="Sprite2D" parent="BluePrint/SalamanderPositioner"]
+z_index = 10
 material = SubResource("ShaderMaterial_4emt5")
 position = Vector2(-10, 115)
 texture = ExtResource("2_6tsr6")
+
+[node name="MenuLimit" type="Node2D" parent="BluePrint"]
+position = Vector2(4840, 1258)
+
+[node name="Beacons" type="Node" parent="BluePrint"]
+
+[node name="Beacon2" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(900, 2900)
+
+[node name="Beacon3" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1100, 2700)
+
+[node name="Beacon4" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1300, 2500)
+
+[node name="Beacon5" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1300, 2300)
+
+[node name="Beacon6" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1500, 2300)
+
+[node name="Beacon7" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1700, 2300)
+
+[node name="Beacon8" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1700, 2500)
+
+[node name="Beacon9" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1900, 2700)
+
+[node name="Beacon10" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(1900, 2500)
+
+[node name="Beacon11" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2100, 2500)
+
+[node name="Beacon12" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2100, 2300)
+
+[node name="Beacon13" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2300, 2300)
+
+[node name="Beacon14" parent="BluePrint/Beacons" instance=ExtResource("7_ooprk")]
+position = Vector2(2500, 2500)
 
 [node name="Ants" type="Node" parent="."]
 script = ExtResource("2_04n7g")
@@ -210,6 +293,7 @@ script = ExtResource("7_0ujyl")
 [node name="Loyalty" type="Node" parent="GM"]
 
 [node name="Money" type="Node" parent="GM"]
+script = ExtResource("12_1h1r3")
 
 [node name="Round" type="Node" parent="GM"]
 script = ExtResource("8_lk4fj")
@@ -223,5 +307,45 @@ position = Vector2(2092.95, 855.378)
 scale = Vector2(-0.814936, -8.16827)
 zoom = Vector2(0.2, 0.2)
 
-[node name="Waymark27" type="Node2D" parent="."]
-position = Vector2(3139, 1861)
+[node name="City" type="Node" parent="."]
+script = ExtResource("14_awr0w")
+
+[node name="Toad" parent="." instance=ExtResource("17_6mh36")]
+position = Vector2(1855, 2290)
+
+[node name="Dragon" parent="." instance=ExtResource("12_s5paf")]
+position = Vector2(1495, 2570)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MoneyText" type="RichTextLabel" parent="UI"]
+layout_mode = 0
+offset_left = 4920.0
+offset_top = 457.0
+offset_right = 5146.0
+offset_bottom = 567.0
+theme = SubResource("Theme_i5y5a")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "15"
+tab_size = 10
+script = ExtResource("16_vifxg")
+
+[node name="Shop" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Salamander" type="TextureButton" parent="UI/Shop"]
+z_index = 150
+layout_mode = 0
+offset_left = 5231.0
+offset_top = 820.0
+offset_right = 5263.0
+offset_bottom = 852.0
+scale = Vector2(16.67, 7.92609)
+texture_normal = ExtResource("2_64ivj")
+script = ExtResource("14_xg0aa")

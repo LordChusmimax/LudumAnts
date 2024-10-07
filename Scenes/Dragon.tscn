@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cn502344jwb6w"]
+[gd_scene load_steps=16 format=3 uid="uid://cn502344jwb6w"]
 
 [ext_resource type="Texture2D" uid="uid://c6stji2gehdgf" path="res://LudumAnts/Sprites/Dragon/dragon_1.png" id="1_1ao0n"]
 [ext_resource type="Script" path="res://LudumAnts/Scenes/dragonRange.gd" id="2_fp5ig"]
@@ -30,6 +30,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_62c4j"]
 resource_name = "Idle"
+loop_mode = 1
 step = 1.33
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -66,6 +67,9 @@ _data = {
 "RESET": SubResource("Animation_03v4r")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_kki6c"]
+radius = 140.0
+
 [node name="Dragon" type="Node2D"]
 
 [node name="SpriteParent" type="Node2D" parent="."]
@@ -95,3 +99,8 @@ script = ExtResource("8_roirb")
 visible = false
 texture = ExtResource("7_mkcsr")
 script = ExtResource("9_qa4p8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_kki6c")

@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dmt2738ntsk75"]
+
+[ext_resource type="Shader" path="res://LudumAnts/GreenishShader.gdshader" id="1_crl1w"]
+
+[resource]
+shader = ExtResource("1_crl1w")

@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bhy44iqi7f63d"]
+
+[ext_resource type="Shader" path="res://LudumAnts/RedishShader.gdshader" id="1_q4rql"]
+
+[resource]
+shader = ExtResource("1_q4rql")
