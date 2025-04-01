@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://cpnkpgp66f34y"]
+[gd_scene load_steps=84 format=3 uid="uid://cpnkpgp66f34y"]
 
 [ext_resource type="Texture2D" uid="uid://ci5gofm3fqbyl" path="res://LudumAnts/gobernor_domain.png" id="1_ksf63"]
 [ext_resource type="Texture2D" uid="uid://bx51rhdhe076c" path="res://LudumAnts/pillager_kingdom.png" id="2_na7rv"]
@@ -70,6 +70,7 @@
 [ext_resource type="Texture2D" uid="uid://j5soll0fo6q1" path="res://LudumAnts/Sprites/LoyaltyBar/loyalty_bar_contour.png" id="67_d3f8p"]
 [ext_resource type="Texture2D" uid="uid://crecrl1p4x6ec" path="res://LudumAnts/Sprites/LoyaltyBar/loyalty_bar_color.png" id="68_y2j6r"]
 [ext_resource type="AudioStream" uid="uid://btlelbteqkf0e" path="res://LudumAnts/Music/Batalla master.mp3" id="69_2yoeo"]
+[ext_resource type="Script" path="res://LudumAnts/Scenes/audio_stream_player.gd" id="71_qgouk"]
 
 [sub_resource type="TileSet" id="TileSet_lb3np"]
 tile_size = Vector2i(90, 90)
@@ -1262,3 +1263,4 @@ texture_progress = ExtResource("68_y2j6r")
 stream = ExtResource("69_2yoeo")
 autoplay = true
 parameters/looping = true
+script = ExtResource("71_qgouk")

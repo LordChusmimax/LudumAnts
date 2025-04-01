@@ -36,7 +36,7 @@ func move(delta):
 			ant.hit(5)
 
 	# Check if we are close enough to the target to stop
-	if position.distance_to(route[nextWaypointindex].position) < 5:
+	if position.distance_to(route[nextWaypointindex].position) < 100:
 		position = route[nextWaypointindex].position  # Snap to the target position
 		if nextWaypointindex+1 == len(route):
 			goal()
